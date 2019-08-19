@@ -23,13 +23,25 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <bibl><title>EXCHANGE TABLE MODEL DOCUMENT TYPE DEFINITION</title> SGML Open Technical Resolution TR
+               9503:1995 Harvey Bingham, Interleaf, Chair, Table Interchange Subcommittee, SGML Open Revision date: 1996
+               May 8 Copyright © 1995, 1996 by OASIS </bibl>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
    <text>
       <body>
-         <div>
+         <div type="documentation">
+            <div n="7">
+               <head>Element and attribute description for <gi>entry</gi></head>
+               <div n="7.1">
+                  <head>General</head>
+                  <p>Identifies an <gi>entry</gi> in a <gi>row</gi> of a <gi>thead</gi> or <gi>tbody</gi> in a
+                        <gi>tgroup</gi>.</p>
+               </div>
+            </div>
+         </div>
+         <div type="specification">
             <schemaSpec ident="calsModel" start="calstable">
                <moduleSpec ident="cals"/>
 
@@ -270,10 +282,10 @@
                      </attDef>
                   </attList>
                </elementSpec>
-               
+
                <!-- module="cals" prefix="cals_"  prefix="cals_" -->
 
-               <elementSpec ident="entry" mode="add"  ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901">
                   <gloss>Entry in Table</gloss>
                   <desc>Identifies an <gi>entry</gi> in a <gi>row</gi> of a <gi>thead</gi>, <gi>tfoot</gi>, or
                         <gi>tbody</gi> in a <gi>tgroup</gi> or <gi>entrytbl</gi>. Default values for colsep, rowsep,
@@ -288,7 +300,9 @@
                   </classes>
                   <content>
                      <alternate>
+                        <!-- #PCDATA in the original spec -->
                         <textNode/>
+                        <!-- added to provide TEI compatibility -->
                         <elementRef key="p"/>
                         <classRef key="model.global"/>
                         <macroRef key="macro.paraContent"/>
