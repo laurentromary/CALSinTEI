@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
+   <!-- 
+      https://www.oasis-open.org/specs/tablemodels.php
+      https://www.oasis-open.org/specs/a502.htm
+   https://www.oasis-open.org/specs/tr9503.html
+   -->
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>ODD specification of the OASIS CALS model</title>
+            <author>
+               <persName>
+                  <forename>Laurent</forename>
+                  <surname>Romary</surname>
+               </persName>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <schemaSpec ident="calsModel" start="calstable">
+               <moduleSpec ident="cals"/>
+
+
+               <macroSpec mode="add" ident="yesorno">
+                  <content>
+                     <rng:choice>
+                        <rng:value>0</rng:value>
+                        <rng:value>1</rng:value>
+                     </rng:choice>
+                  </content>
+               </macroSpec>
+
+               <elementSpec mode="add" ident="calstable" ns="http://www.oasis-open.org/specs/tm9901">
+                  <!--<altIdent>table</altIdent>
+                  -->
+                  <classes>
+                     <memberOf key="model.inter"/>
+                  </classes>
+                  <content>
+                     <rng:optional>
+                        <rng:ref name="calstabletitle"/>
+                     </rng:optional>
+                     <rng:oneOrMore>
+                        <rng:ref name="tgroup"/>
+                     </rng:oneOrMore>
+                  </content>
+                  <attList>
+                     <attDef ident="corresp" ns="http://www.tei-c.org/ns/1.0">
+                        <datatype>
+                           <rng:data type="anyURI"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="style" ns="http://www.iso.org/ns/1.0">
+                        <datatype>
+                           <rng:text/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="xml:id">
+                        <datatype>
+                           <rng:data type="ID"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="frame">
+                        <valList type="closed">
+                           <valItem ident="top"/>
+                           <valItem ident="bottom"/>
+                           <valItem ident="topbot"/>
+                           <valItem ident="all"/>
+                           <valItem ident="sides"/>
+                           <valItem ident="none"/>
+                        </valList>
+                     </attDef>
+
+                     <attDef ident="colsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+
+                     <attDef ident="rowsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901">
+                  <content>
+                     <rng:zeroOrMore>
+                        <rng:ref name="colspec"/>
+                     </rng:zeroOrMore>
+                     <rng:optional>
+                        <rng:ref name="thead"/>
+                     </rng:optional>
+                     <rng:ref name="tbody"/>
+                  </content>
+                  <attList>
+                     <attDef ident="cols">
+                        <datatype>
+                           <rng:data type="NMTOKEN"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="colsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="rowsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="align">
+                        <valList type="closed">
+                           <valItem ident="left"/>
+                           <valItem ident="right"/>
+                           <valItem ident="center"/>
+                           <valItem ident="justify"/>
+                           <valItem ident="char"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="colspec" ns="http://www.oasis-open.org/specs/tm9901">
+                  <content>
+                     <rng:empty/>
+                  </content>
+                  <attList>
+                     <attDef ident="colnum">
+                        <desc>Number of column, counting from 1 at left of the table.</desc>
+                        <datatype>
+                           <dataRef name="nonNegativeInteger"/>
+                        </datatype>
+                        <remarks>
+                           <p>The value of colnum is not useful to identify a column in an <gi>entry</gi>, so serves no
+                              functional purpose other than a consistency check on the order of the
+                              <gi>colspec</gi>s.</p>
+                        </remarks>
+                     </attDef>
+                     <attDef ident="colname">
+                        <datatype>
+                           <rng:data type="NMTOKEN"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="colwidth">
+                        <datatype>
+                           <rng:text/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="colsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="rowsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="align">
+                        <valList type="closed">
+                           <valItem ident="left"/>
+                           <valItem ident="right"/>
+                           <valItem ident="center"/>
+                           <valItem ident="justify"/>
+                           <valItem ident="char"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="char">
+                        <datatype>
+                           <rng:text/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="charoff">
+                        <datatype>
+                           <rng:data type="NMTOKEN"/>
+                        </datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="calstabletitle" ns="http://www.oasis-open.org/specs/tm9901">
+                  <altIdent>title</altIdent>
+                  <content>
+                     <rng:ref name="macro.paraContent"/>
+                  </content>
+                  <attList>
+                     <attDef ident="xml:id">
+                        <datatype>
+                           <rng:data type="ID"/>
+                        </datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901">
+                  <content>
+                     <rng:oneOrMore>
+                        <rng:ref name="calsrow"/>
+                     </rng:oneOrMore>
+                  </content>
+                  <attList>
+                     <attDef ident="valign">
+                        <valList type="closed">
+                           <valItem ident="top"/>
+                           <valItem ident="middle"/>
+                           <valItem ident="bottom"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901">
+                  <content>
+                     <rng:oneOrMore>
+                        <rng:ref name="calsrow"/>
+                     </rng:oneOrMore>
+                  </content>
+                  <attList>
+                     <attDef ident="valign">
+                        <valList type="closed">
+                           <valItem ident="top"/>
+                           <valItem ident="middle"/>
+                           <valItem ident="bottom"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="calsrow" ns="http://www.oasis-open.org/specs/tm9901">
+                  <altIdent>row</altIdent>
+                  <content>
+                     <rng:oneOrMore>
+                        <rng:ref name="entry"/>
+                     </rng:oneOrMore>
+                  </content>
+                  <attList>
+                     <attDef ident="style" ns="http://www.iso.org/ns/1.0">
+                        <datatype>
+                           <rng:text/>
+                        </datatype>
+                     </attDef>
+
+                     <attDef ident="rowsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="valign">
+                        <valList type="closed">
+                           <valItem ident="top"/>
+                           <valItem ident="middle"/>
+                           <valItem ident="bottom"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec mode="add" ident="entry" ns="http://www.oasis-open.org/specs/tm9901">
+                  <gloss>Entry in Table</gloss>
+                  <desc>Identifies an <gi>entry</gi> in a <gi>row</gi> of a <gi>thead</gi>, <gi>tfoot</gi>, or
+                        <gi>tbody</gi> in a <gi>tgroup</gi> or <gi>entrytbl</gi>. Default values for colsep, rowsep,
+                     valign, align, char, and charoff may come from like-named attributes from the nearest element
+                     identified as influencing this <gi>entry</gi>. The values may come from <gi>table</gi> (or a
+                     tabstyle therein), <gi>tgroup</gi> (or a tgroupstyle therein), <gi>spanspec</gi> (defining the
+                     spanname), <gi>colspec</gi> (defining namest or colname), <gi>tbody</gi>, <gi>row</gi>, or when
+                     within an <gi>entrytbl</gi> those elements so contained, or its tgroupstyle. Note that
+                        <gi>colspec</gi> and <gi>spanspec</gi> are not strictly in the element lineage.</desc>
+                  <classes>
+                     <memberOf key="att.global.CALSlayout"/>
+                  </classes>
+                  <content>
+                     <alternate>
+                        <textNode/>
+                        <elementRef key="p"/>
+                        <classRef key="model.global"/>
+                        <macroRef key="macro.paraContent"/>
+                     </alternate>
+                     <!--                     <rng:oneOrMore>
+                        <rng:choice>
+                           <rng:ref name="p"/>
+                           <rng:ref name="model.global"/>
+                           <rng:ref name="macro.paraContent"/>
+                        </rng:choice>
+                     </rng:oneOrMore>-->
+                  </content>
+                  <attList>
+                     <attDef ident="style" ns="http://www.iso.org/ns/1.0">
+                        <datatype>
+                           <rng:text/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="colname">
+                        <datatype>
+                           <rng:data type="NMTOKEN"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="morerows">
+                        <datatype>
+                           <rng:data type="NMTOKEN"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="rotate">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="char">
+                        <datatype>
+                           <rng:text/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="charoff">
+                        <datatype>
+                           <rng:data type="NMTOKEN"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="valign">
+                        <valList type="closed">
+                           <valItem ident="top"/>
+                           <valItem ident="middle"/>
+                           <valItem ident="bottom"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <!-- <!ELEMENT spanspec - O EMPTY > 
+                  <!ATTLIST spanspec
+        namest          NMTOKEN                                 #REQUIRED
+        nameend         NMTOKEN                                 #REQUIRED
+        spanname        NMTOKEN                                 #REQUIRED
+        colsep          %yesorno;                               #IMPLIED
+        rowsep          %yesorno;                               #IMPLIED
+        align           (left|right|center|justify|char)        #IMPLIED
+        char            CDATA                                   #IMPLIED
+        charoff         NUTOKEN                                 #IMPLIED
+>
+               -->
+
+               <elementSpec ident="spanspec" module="cals">
+                  <classes>
+                     <memberOf key="att.global.CALSlayout"/>
+                  </classes>
+                  <content>
+                     <empty/>
+                  </content>
+               </elementSpec>
+
+
+               <!-- Macros -->
+
+               <!-- <!ENTITY % tbl.entrytbl.mdl     "colspec*,spanspec*,thead?,tbody"> -->
+               <macroSpec ident="macro.tbl.entrytbl.mdl">
+                  <content>
+                     <elementRef key="spanspec" minOccurs="0" maxOccurs="unbounded"/>
+                  </content>
+               </macroSpec>
+
+               <!-- <!ENTITY % tbl.entry.mdl        "(para|warning|caution|note|legend|%paracon;)*"> -->
+
+               <!-- To be discussed depending on the content model we aim at (e.g. <p> for PDM compatibility) -->
+
+               <!--<macroSpec ident="macro.tbl.entry.mdl">
+                  <content>
+                     <elementRef key="spanspec" minOccurs="0" maxOccurs="unbounded"/>
+                  </content>
+               </macroSpec>
+               -->
+
+
+               <!-- Attribute classe -->
+
+               <!-- 
+                  namest          NMTOKEN                           #REQUIRED
+                  nameend         NMTOKEN                        #REQUIRED
+                  spanname        NMTOKEN                       #REQUIRED
+                  colsep          %yesorno;                               #IMPLIED
+                  rowsep          %yesorno;                               #IMPLIED
+                  align           (left|right|center|justify|char)        #IMPLIED
+                  char            CDATA                                   #IMPLIED
+                  charoff         NUTOKEN     
+ -->
+
+               <classSpec type="atts" ident="att.global.CALSlayout" module="cals">
+                  <attList>
+                     <attDef ident="namest">
+                        <datatype>
+                           <dataRef key="teidata.name"/>
+                           <!-- <rng:data type="NMTOKEN"/> -->
+                        </datatype>
+                     </attDef>
+                     <attDef ident="nameend">
+                        <datatype>
+                           <dataRef key="teidata.name"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="colsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="rowsep">
+                        <datatype>
+                           <rng:ref name="yesorno"/>
+                        </datatype>
+                     </attDef>
+                     <attDef ident="align">
+                        <valList type="closed">
+                           <valItem ident="left"/>
+                           <valItem ident="right"/>
+                           <valItem ident="center"/>
+                           <valItem ident="justify"/>
+                           <valItem ident="char"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </classSpec>
+
+            </schemaSpec>
+         </div>
+      </body>
+   </text>
+</TEI>
