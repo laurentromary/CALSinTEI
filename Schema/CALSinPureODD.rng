@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.tei-c.org/ns/1.0"><!--
+Schema generated from ODD source 2019-08-19T10:12:15Z. .
+TEI Edition: Version 3.6.0. Last updated on
+	16th July 2019, revision daa3cc0b9
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
+  
+--><!---->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <define name="yesorno">
+      <choice>
+         <value>0</value>
+         <value>1</value>
+      </choice>
+   </define>
+   <define name="calstable">
+      <element name="calstable" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="calstabletitle"/>
+         </optional>
+         <oneOrMore>
+            <ref name="tgroup"/>
+         </oneOrMore>
+         <optional>
+            <attribute name="corresp" ns="http://www.tei-c.org/ns/1.0">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="style" ns="http://www.iso.org/ns/1.0">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:id">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="frame">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>top</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bottom</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>topbot</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>all</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>sides</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>none</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tgroup">
+      <element name="tgroup" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="colspec"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="thead"/>
+         </optional>
+         <ref name="tbody"/>
+         <optional>
+            <attribute name="cols">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>left</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>right</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>center</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>justify</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>char</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="colspec">
+      <element name="colspec" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <optional>
+            <attribute name="colnum">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Number of column, counting from 1 at left of the table.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colname">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colwidth">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>left</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>right</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>center</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>justify</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>char</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="char">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="charoff">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="calstabletitle">
+      <element name="title" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <attribute name="xml:id">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="thead">
+      <element name="thead" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="calsrow"/>
+         </oneOrMore>
+         <optional>
+            <attribute name="valign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>top</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>middle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bottom</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbody">
+      <element name="tbody" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="calsrow"/>
+         </oneOrMore>
+         <optional>
+            <attribute name="valign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>top</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>middle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bottom</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="calsrow">
+      <element name="row" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="entry"/>
+         </oneOrMore>
+         <optional>
+            <attribute name="style" ns="http://www.iso.org/ns/1.0">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowsep">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="valign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>top</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>middle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bottom</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="entry">
+      <element name="entry" ns="http://www.oasis-open.org/specs/tm9901">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entry in Table) Identifies an <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code> of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;thead&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml">&lt;tfoot&gt;</code>, or <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code> in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;entrytbl&gt;</code>. Default values for colsep, rowsep, valign, align, char, and charoff may come from like-named attributes from the nearest element identified as influencing this <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>. The values may come from <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code> (or a tabstyle therein), <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code> (or a tgroupstyle therein), <code xmlns="http://www.w3.org/1999/xhtml">&lt;spanspec&gt;</code> (defining the spanname), <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code> (defining namest or colname), <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>, or when within an <code xmlns="http://www.w3.org/1999/xhtml">&lt;entrytbl&gt;</code> those elements so contained, or its tgroupstyle. Note that <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code> and <code xmlns="http://www.w3.org/1999/xhtml">&lt;spanspec&gt;</code> are not strictly in the element lineage.</a:documentation>
+         <choice>
+            <text/>
+         </choice>
+         <ref name="att.global.CALSlayout.attributes"/>
+         <optional>
+            <attribute name="style" ns="http://www.iso.org/ns/1.0">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colname">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="morerows">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rotate">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="yesorno"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="char">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="charoff">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="valign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>top</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>middle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bottom</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="att.global.CALSlayout.attributes">
+      <ref name="att.global.CALSlayout.attribute.namest"/>
+      <ref name="att.global.CALSlayout.attribute.nameend"/>
+      <ref name="att.global.CALSlayout.attribute.colsep"/>
+      <ref name="att.global.CALSlayout.attribute.rowsep"/>
+      <ref name="att.global.CALSlayout.attribute.align"/>
+   </define>
+   <define name="att.global.CALSlayout.attribute.namest">
+      <optional>
+         <attribute name="namest">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.CALSlayout.attribute.nameend">
+      <optional>
+         <attribute name="nameend">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.CALSlayout.attribute.colsep">
+      <optional>
+         <attribute name="colsep">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <ref name="yesorno"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.CALSlayout.attribute.rowsep">
+      <optional>
+         <attribute name="rowsep">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <ref name="yesorno"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.CALSlayout.attribute.align">
+      <optional>
+         <attribute name="align">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>left</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>right</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>center</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>justify</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>char</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <start>
+      <choice>
+         <ref name="calstable"/>
+      </choice>
+   </start>
+</grammar>

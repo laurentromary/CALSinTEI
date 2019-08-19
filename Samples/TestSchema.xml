@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/Users/romary/Documents/Workbench/CALSinTEI/Schema/CALSinPureODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<calstable xmlns="http://www.oasis-open.org/specs/tm9901">
+    <tgroup>
+        <tbody>
+            <row>
+                <entry>
+                    
+                </entry>
+            </row>
+        </tbody>
+    </tgroup>
+</calstable>
