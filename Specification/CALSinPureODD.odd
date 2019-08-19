@@ -270,8 +270,10 @@
                      </attDef>
                   </attList>
                </elementSpec>
+               
+               <!-- module="cals" prefix="cals_"  prefix="cals_" -->
 
-               <elementSpec mode="add" ident="entry" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec ident="entry" mode="add"  ns="http://www.oasis-open.org/specs/tm9901">
                   <gloss>Entry in Table</gloss>
                   <desc>Identifies an <gi>entry</gi> in a <gi>row</gi> of a <gi>thead</gi>, <gi>tfoot</gi>, or
                         <gi>tbody</gi> in a <gi>tgroup</gi> or <gi>entrytbl</gi>. Default values for colsep, rowsep,
