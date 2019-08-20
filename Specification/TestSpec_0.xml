@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/jromary/Programmation/XML/CALSinTEI/Specification/out/CALSinPureODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<table xmlns="http://www.oasis-open.org/specs/tm9901">
+    <tgroup cols="">
+        <colspec colnum="1" align="center" char="" charoff="" colname="" colsep="2" colwidth=""
+            rowsep="0"/>
+        <colspec colnum="0"/>
+        <thead valign="bottom">
+            <row valign="bottom" rowsep="0">
+                <entry rowsep="0" valign="bottom" colsep="1" colname="" charoff="" char=""
+                    align="char" morerows="2" nameend="" namest="" rotate="0"/>
+            </row>
+            <row>
+                <entry/>
+            </row>
+        </thead>
+        <tbody valign="bottom">
+            <row>
+                <entry/>
+            </row>
+            <row>
+                <entry/>
+                <entry/>
+            </row>
+            <row>
+                <entry/>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
