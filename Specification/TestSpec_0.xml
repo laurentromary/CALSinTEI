@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="file:/home/jromary/Programmation/XML/CALSinTEI/Specification/out/CALSinPureODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<table xmlns="http://www.oasis-open.org/specs/tm9901">
+<table xmlns="http://www.oasis-open.org/specs/tm9901" colsep="0" rowsep="0" frame="bottom" pgwide="0">
     <tgroup cols="">
         <colspec colnum="1" align="center" char="" charoff="" colname="" colsep="2" colwidth=""
             rowsep="0"/>
@@ -8,7 +8,7 @@
         <thead valign="bottom">
             <row valign="bottom" rowsep="0">
                 <entry rowsep="0" valign="bottom" colsep="1" colname="" charoff="" char=""
-                    align="char" morerows="2" nameend="" namest="" rotate="0"/>
+                    align="char" morerows="2" nameend="test" namest="test" rotate="0"/>
             </row>
             <row>
                 <entry/>
@@ -24,6 +24,20 @@
             </row>
             <row>
                 <entry/>
+            </row>
+        </tbody>
+    </tgroup>
+    <tgroup cols="" colsep="0" rowsep="0" align="char">
+        <colspec colnum="1" colname="" colwidth="" colsep="0" rowsep="0" align="char" char="" charoff=""/>
+        <colspec/>
+        <thead valign="middle">
+            <row rowsep="0" valign="bottom">
+                <entry></entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry></entry>
             </row>
         </tbody>
     </tgroup>
