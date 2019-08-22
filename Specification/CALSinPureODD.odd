@@ -133,7 +133,7 @@
                         number other than zero, display the internal column rulings to the right of
                         each <gi>entry</gi>; if zero, do not display them. Ignored for the rightmost
                         column, where the frame setting applies.</p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED (implies value from style specification if available, if
                         not, implies "1").</p>
                   </div>
@@ -145,7 +145,7 @@
                         Ignored for the last <gi>row</gi> of the <gi>table</gi> (i.e., the last
                            <gi>row</gi> of the last <gi>tgroup</gi> in this <gi>table</gi>), where
                         the frame value applies.</p>
-                     <p> Declared value: %yesorno; (NUMBER)</p>
+                     <p> Declared value: %yesorno; (nonNegativeInteger; old: NUMBER)</p>
                      <p>Default: IMPLIED (implies value from style specification if available, if
                         not, implies "1").</p>
                   </div>
@@ -159,7 +159,7 @@
                         and any extra processing associated with column balancing and page spanning
                         to be performed). This attribute is ignored when orient="land" where all
                         tables are treated as if pgwide="1".</p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED (implies value from the style specification if available).
                         In the absence of an explicit value (or one implied from the style
                         specification), the system should attempt to format the table into a galley
@@ -239,7 +239,7 @@
                   <div n="2.2.1">
                      <head><att>cols</att> number of columns</head>
                      <p>Number of columns in the <gi>tgroup</gi>. </p>
-                     <p>Declared value: NUMBER</p>
+                     <p>Declared value: nonNegativeInteger (old: NUMBER)</p>
                   </div>
                </div>
                <div n="2.3">
@@ -251,7 +251,7 @@
                            <gi>entry</gi>; if zero, do not display them. Ignored for the last
                         (rightmost) column, where the frame setting applies. Possible default source
                         for <gi>colspec</gi> or <gi>entry</gi>.</p>
-                     <p>Declared value: %yesorno; (NUMBER)</p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER)</p>
                      <p>Default: IMPLIED (implies value from style specification if any, else from
                            <gi>table</gi>)</p>
                   </div>
@@ -265,7 +265,7 @@
                         only) in the table, the regular <gi>row</gi> or <gi>entry</gi> rowsep
                         specifications apply. Possible default source for <gi>row</gi> or
                            <gi>entry</gi>.</p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED (implies value from style specification if any, else from
                            <gi>table</gi>)</p>
                   </div>
@@ -336,7 +336,7 @@
                         is not useful to identify a column in an <gi>entry</gi>, so serves no
                         functional purpose other than a consistency check on the order of the
                            <gi>colspec</gi>s. </p>
-                     <p>Declared value: NUMBER</p>
+                     <p>Declared value: nonNegativeInteger (old: NUMBER)</p>
                      <p>Default: IMPLIED (colspec is the next one in order) </p>
                   </div>
                   <div n="3.2.2">
@@ -364,14 +364,14 @@
                         unit values is "pt" (points), "cm" (centimeters), "mm" (millimeters), "pi"
                         (picas), and "in" (inches). The default fixed unit should be interpreted as
                         "pt" if neither a proportion nor a fixed unit is specified.</p>
-                     <p> Declared value: CDATA </p>
+                     <p> Declared value: (teidata.text; old: CDATA) </p>
                      <p> Default: IMPLIED (means assume a proportional measure of "1*") </p>
                   </div>
                   <div n="3.2.4">
                      <head><att>colsep</att> column separators (vertical ruling)</head>
                      <p>Default for column ruling to the right of <gi>entry</gi>s starting in this
                         column (within the <gi>tgroup</gi>).</p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED, from <gi>tgroup</gi>. </p>
                   </div>
                   <div n="3.2.5">
@@ -381,7 +381,7 @@
                            <gi>row</gi> in which the <gi>entry</gi> occurs. Note that with a
                         non-zero value for morerows on the entry, that ruling will be several rows
                         lower. </p>
-                     <p>Declared value: %yesorno; (NUMBER)</p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER)</p>
                      <p>Default: IMPLIED, from <gi>tgroup</gi>. </p>
                   </div>
                   <div n="3.2.6">
@@ -402,7 +402,7 @@
                         char values for <gi>entry</gi> immediately in this column. The char shall
                         not be an SDATA entity. A value of "" (the null string) means there is no
                         aligning character. </p>
-                     <p>Declared value: CDATA </p>
+                     <p>Declared value: (teidata.text; old: CDATA) </p>
                      <p>Default: IMPLIED, means "" (i.e., there is no aligning character). </p>
                   </div>
                   <div n="3.2.8">
@@ -412,7 +412,7 @@
                         align="char" on an <gi>entry</gi> in the column, horizontal character offset
                         is the percent of the current column width to the left of the (left edge of
                         the) alignment character. </p>
-                     <p>Declared value: NUTOKEN </p>
+                     <p>Declared value: nonNegativeInteger (old: NUTOKEN) </p>
                      <p>Default: IMPLIED, means "50" (i.e., 50%)</p>
                   </div>
                </div>
@@ -488,7 +488,7 @@
                         ruling below an <gi>entry</gi> in the <gi>row</gi>. If zero, do not display
                         it. Rowsep is ignored for the last <gi>row</gi> of the table where the frame
                         specification determines the ruling. </p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED, from the closest element in the inheritance path: <list>
                            <item><gi>tgroup</gi> then</item>
                            <item><gi>table</gi>.</item>
@@ -601,7 +601,7 @@
                            <gi>colspec</gi> of the current <gi>tgroup</gi>. The column must be to
                         the right of the column identified by namest. Nameend without namest is
                         ignored. </p>
-                     <p>Declared value: NMTOKEN </p>
+                     <p>Declared value: teidata.name (old: NMTOKEN) </p>
                      <p>Default: IMPLIED (implies this attribute has no effect on spanning) </p>
                   </div>
                   <div n="7.2.4">
@@ -611,7 +611,7 @@
                            <gi>thead</gi> or <gi>tbody</gi>. Any entries with morerows that would
                         attempt to extend further downward is an error. The rowsep is determined
                         when the entry is processed, in the top row if morerows is positive. </p>
-                     <p>Declared value: NUMBER </p>
+                     <p>Declared value: nonNegativeInteger (old: NUMBER) </p>
                      <p>Default: IMPLIED (interpret as "0") </p>
                   </div>
                   <div n="7.2.5">
@@ -621,7 +621,7 @@
                         column of a <gi>row</gi>, where the frame setting applies. The colsep value
                         is determined by the leftmost column of a spanning entry, even though its
                         effect is on the last column of such spanning entry. </p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED, from the closest element in the inheritance path: <list>
                            <item><gi>colspec</gi> then</item>
                            <item><gi>tgroup</gi> then</item>
@@ -640,7 +640,7 @@
                            <gi>row</gi> of <gi>tgroup</gi> where the table frame applies. Rowsep for
                         the entry is determined in the topmost row in which the entry occurs, even
                         though its effect may be morerows below. </p>
-                     <p>Declared value: %yesorno; (NUMBER) </p>
+                     <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p> Default: IMPLIED, from the closest element in the inheritance path: <list>
                            <item>
                               <gi>row</gi> then </item>
@@ -680,7 +680,7 @@
                         character does not occur in the <gi>entry</gi>, the <gi>entry</gi> right
                         aligns to the left of the charoff position. The value of the char attribute
                         shall not be an SDATA entity. </p>
-                     <p>Declared value: CDATA </p>
+                     <p>Declared value: teidata.text (old: CDATA) </p>
                      <p>Default: IMPLIED, from <gi>colspec</gi> else there is no aligning character.
                      </p>
                   </div>
@@ -690,7 +690,7 @@
                      <p>When align="char" for this <gi>entry</gi>, horizontal character offset is
                         the percent of the current column width to the left of the (left edge of
                         the) alignment character. </p>
-                     <p>Declared value: NUTOKEN </p>
+                     <p>Declared value: nonNegativeInteger (old: NUTOKEN) </p>
                      <p>Default: IMPLIED, from <gi>colspec</gi> else "50" (i.e., 50%). </p>
                   </div>
                   <div n="7.2.10">
@@ -744,7 +744,6 @@
                      <attDef ident="xml:id">
                         <datatype>
                            <dataRef key="ID"/>
-                           <!-- <rng:data type="ID"/> -->
                         </datatype>
                      </attDef>
                      <attDef ident="frame">
@@ -796,7 +795,7 @@
                   <attList>
                      <attDef ident="cols" usage="req">
                         <datatype>
-                           <dataRef key="NMTOKEN"/>
+                           <dataRef name="nonNegativeInteger"/>
                         </datatype>
                      </attDef>
                      <attDef ident="colsep">
@@ -857,7 +856,7 @@
                         <desc>Either proportional measure of the form number* or fixed measure (pt,
                            pi, pica).</desc>
                         <datatype>
-                           <rng:text/>
+                           <dataRef key="teidata.text"/>
                         </datatype>
                      </attDef>
                      <attDef ident="colsep">
@@ -894,7 +893,7 @@
                      </attDef>
                      <attDef ident="charoff">
                         <datatype>
-                           <dataRef key="NMTOKEN"/>
+                           <dataRef key="nonNegativeInteger"/>
                         </datatype>
                      </attDef>
                   </attList>
@@ -1023,7 +1022,7 @@
                      </attDef>
                      <attDef ident="morerows">
                         <datatype>
-                           <dataRef key="NMTOKEN"/>
+                           <dataRef key="nonNegativeInteger"/>
                         </datatype>
                      </attDef>
                      <attDef ident="rotate" validUntil="1996-05-08">
@@ -1038,7 +1037,7 @@
                      </attDef>
                      <attDef ident="charoff">
                         <datatype>
-                           <dataRef key="NMTOKEN"/>
+                           <dataRef key="nonNegativeInteger"/>
                         </datatype>
                      </attDef>
                      <attDef ident="valign">
