@@ -5,10 +5,10 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-08-22T12:02:11Z. .
-TEI Edition: Version 3.5.0. Last updated on
-	29th January 2019, revision 3c0c64ec4
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
+Schema generated from ODD source 2019-08-22T14:39:53Z. .
+TEI Edition: Version 3.6.0. Last updated on
+	16th July 2019, revision daa3cc0b9
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
   
 --><!---->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -423,7 +423,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="calstable">
       <element name="table" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The table element markup identifies a table.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code> element markup identifies a table.</a:documentation>
          <optional>
             <ref name="calstabletitle"/>
          </optional>
@@ -467,13 +467,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="colsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all tgroups in this table. If a number other than zero, display the internal column rulings to the right of each entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>. If a number other than zero, display the internal column rulings to the right of each <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all tgroups in this table. If other than zero, display the internal horizontal row ruling below each entry ending in a row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>. If other than zero, display the internal horizontal row ruling below each <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> ending in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
@@ -488,7 +488,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="tgroup">
       <element name="tgroup" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Each tgroup effectively identifies a new portion of a table.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Each <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code> effectively identifies a new portion of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>.</a:documentation>
          <zeroOrMore>
             <ref name="colspec"/>
          </zeroOrMore>
@@ -502,13 +502,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </attribute>
          <optional>
             <attribute name="colsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all colspecs in this tgroup. If other than zero, display the internal column rulings to the right of entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>. If other than zero, display the internal column rulings to the right of <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for colspecs in this tgroup. If other than zero, display the internal horizontal row ruling below each entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>. If other than zero, display the internal horizontal row ruling below each <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
@@ -534,7 +534,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="colspec">
       <element name="colspec" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a column, a vertical portion of a table.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a column, a vertical portion of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>.</a:documentation>
          <empty/>
          <optional>
             <attribute name="colnum">
@@ -544,7 +544,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="colname">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of column, used to specify the position or horizontal span of columns in a row by reference in entry using colname, namest, and/or nameend.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of column, used to specify the position or horizontal span of columns in a row by reference in <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> using colname, namest, and/or nameend.</a:documentation>
             </attribute>
          </optional>
          <optional>
@@ -555,19 +555,19 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="colsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for column ruling to the right of entrys starting in this column (within the tgroup).</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for column ruling to the right of <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s starting in this column (within the <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>).</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for row ruling below an entry starting in this column when there is neither a rowsep value on the entry nor on the row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for row ruling below an <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> starting in this column when there is neither a rowsep value on the <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> nor on the <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="align">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text horizontal position within the column or spanning columns. Possible default source for entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text horizontal position within the column or spanning columns. Possible default source for <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <choice>
                   <value>left</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -610,13 +610,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="thead">
       <element name="thead" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the heading rows of a tgroup, displayed as the first rows, and again at the top of any continuation after a physical break between rows in tbody.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the heading <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>s of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>, displayed as the first rows, and again at the top of any continuation after a physical break between <code xmlns="http://www.w3.org/1999/xhtml">&lt;rows&gt;</code> in <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code>.</a:documentation>
          <oneOrMore>
             <ref name="calsrow"/>
          </oneOrMore>
          <optional>
             <attribute name="valign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default text vertical positioning within the entrys. Provides default value for rows and entrys in thead.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default text vertical positioning within the <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s. Provides default value for <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>s and <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s in <code xmlns="http://www.w3.org/1999/xhtml">&lt;thead&gt;</code>.</a:documentation>
                <choice>
                   <value>top</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -632,13 +632,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="tbody">
       <element name="tbody" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the body of a tgroup.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the body of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>.</a:documentation>
          <oneOrMore>
             <ref name="calsrow"/>
          </oneOrMore>
          <optional>
             <attribute name="valign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default Text vertical positioning within the entrys. Provides default value for row and entrys in tbody.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default Text vertical positioning within the <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s. Provides default value for <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code> and <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s in <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code>.</a:documentation>
                <choice>
                   <value>top</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -654,7 +654,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <define name="calsrow">
       <element name="row" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the row information in a thead or tbody element.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the row information in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;thead&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code> element.</a:documentation>
          <oneOrMore>
             <ref name="entry"/>
          </oneOrMore>
@@ -666,13 +666,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for all entrys starting in this row that do not specify rowsep. If other than zero, display the internal horizontal row ruling below an entry in the row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s starting in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code> that do not specify rowsep. If other than zero, display the internal horizontal row ruling below an <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> in the <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="valign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text vertical positioning default for entrys in a row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text vertical positioning default for <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <choice>
                   <value>top</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -703,7 +703,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="colname">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Column name of entry. Ignore if namest is present. It is an error if colname is not defined in a colspec of the current tgroup.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Column name of <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>. Ignore if namest is present. It is an error if colname is not defined in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code> of the current <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>.</a:documentation>
             </attribute>
          </optional>
          <optional>

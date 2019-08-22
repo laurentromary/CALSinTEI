@@ -711,6 +711,7 @@
             <head>Specification</head>
             <schemaSpec ident="calsModel" start="calstable">
                <moduleRef key="tei"/>
+               
                <moduleSpec ident="cals"/>
 
                <dataSpec ident="teidata.yesorno">
@@ -720,7 +721,7 @@
                   </content>
                </dataSpec>
 
-               <elementSpec mode="add" ident="calstable" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec mode="add" ident="calstable" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <altIdent>table</altIdent>
                   <desc>The <gi>table</gi> element markup identifies a table.</desc>
                   <classes>
