@@ -714,7 +714,7 @@
                
                <moduleSpec ident="cals"/>
 
-               <dataSpec ident="teidata.yesorno">
+               <dataSpec ident="teidata.yesorno" module="cals">
                   <desc>Declaration of boolean type</desc>
                   <content>
                      <dataRef name="nonNegativeInteger"/>
@@ -739,7 +739,7 @@
                      </attDef>
                      <attDef ident="style" ns="http://www.iso.org/ns/1.0">
                         <datatype>
-                           <rng:text/>
+                           <dataRef key="teidata.text"/>
                         </datatype>
                      </attDef>
                      <attDef ident="xml:id">
@@ -784,7 +784,7 @@
                   </attList>
                </elementSpec>
 
-               <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <desc>Each <gi>tgroup</gi> effectively identifies a new portion of a
                         <gi>table</gi>.</desc>
                   <content>
@@ -828,7 +828,7 @@
                   </attList>
                </elementSpec>
 
-               <elementSpec mode="add" ident="colspec" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec mode="add" ident="colspec" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <desc>Specifies a column, a vertical portion of a <gi>table</gi>.</desc>
                   <content>
                      <empty/>
@@ -901,7 +901,7 @@
                </elementSpec>
 
                <elementSpec mode="add" ident="calstabletitle"
-                  ns="http://www.oasis-open.org/specs/tm9901">
+                  ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <altIdent>title</altIdent>
                   <content>
                      <macroRef key="macro.paraContent"/>
@@ -915,7 +915,7 @@
                   </attList>
                </elementSpec>
 
-               <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <desc>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as the
                      first rows, and again at the top of any continuation after a physical break
                      between <gi>rows</gi> in <gi>tbody</gi>.</desc>
@@ -936,7 +936,7 @@
                   </attList>
                </elementSpec>
 
-               <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <desc>Identifies the body of a <gi>tgroup</gi>.</desc>
                   <content>
                      <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
@@ -956,7 +956,7 @@
                   </attList>
                </elementSpec>
 
-               <elementSpec mode="add" ident="calsrow" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec mode="add" ident="calsrow" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <altIdent>row</altIdent>
                   <desc>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi>
                      element. </desc>
@@ -993,7 +993,7 @@
 
                <!-- module="cals" prefix="cals_"  prefix="cals_" -->
 
-               <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901">
+               <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
                   <classes>
                      <memberOf key="att.global.CALSlayout"/>
                   </classes>
@@ -1115,7 +1115,6 @@
                      <attDef ident="namest">
                         <datatype>
                            <dataRef key="teidata.name"/>
-                           <!-- <rng:data type="NMTOKEN"/> -->
                         </datatype>
                      </attDef>
                      <attDef ident="nameend">
@@ -1126,13 +1125,11 @@
                      <attDef ident="colsep">
                         <datatype>
                            <dataRef key="teidata.yesorno"/>
-                           <!-- <rng:ref name="yesorno"/>  -->
                         </datatype>
                      </attDef>
                      <attDef ident="rowsep">
                         <datatype>
                            <dataRef key="teidata.yesorno"/>
-                           <!-- <rng:ref name="yesorno"/>  -->
                         </datatype>
                      </attDef>
                      <attDef ident="align">
