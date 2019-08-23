@@ -710,349 +710,362 @@
          <div type="specification">
             <head>Specification</head>
             <schemaSpec ident="calsModel" start="calstable">
-               <moduleRef key="tei"/>
                
-               <moduleSpec ident="cals"/>
+               <specGrpRef target="#cals"/>
+               <specGrp xml:id="cals">
 
-               <dataSpec ident="teidata.yesorno" module="cals">
-                  <desc>Declaration of boolean type</desc>
-                  <content>
-                     <dataRef name="nonNegativeInteger"/>
-                  </content>
-               </dataSpec>
+                  <moduleRef key="tei"/>
 
-               <elementSpec mode="add" ident="calstable" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <altIdent>table</altIdent>
-                  <desc>The <gi>table</gi> element markup identifies a table.</desc>
-                  <classes>
-                     <memberOf key="model.inter"/>
-                  </classes>
-                  <content>
-                     <elementRef key="calstabletitle" minOccurs="0" maxOccurs="1"/>
-                     <elementRef key="tgroup" minOccurs="1" maxOccurs="unbounded"/>
-                  </content>
-                  <attList>
-                     <attDef ident="corresp" ns="http://www.tei-c.org/ns/1.0">
-                        <datatype>
-                           <dataRef key="anyURI"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="style" ns="http://www.iso.org/ns/1.0">
-                        <datatype>
-                           <dataRef key="teidata.text"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="xml:id">
-                        <datatype>
-                           <dataRef key="ID"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="frame">
-                        <desc>Describes position of outer rulings.</desc>
-                        <valList type="closed">
-                           <valItem ident="top"/>
-                           <valItem ident="bottom"/>
-                           <valItem ident="topbot"/>
-                           <valItem ident="all"/>
-                           <valItem ident="sides"/>
-                           <valItem ident="none"/>
-                        </valList>
-                     </attDef>
+                  <moduleSpec ident="cals"/>
 
-                     <attDef ident="colsep">
-                        <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If
-                           a number other than zero, display the internal column rulings to the
-                           right of each <gi>entry</gi>. </desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
+                  <dataSpec ident="teidata.yesorno" module="cals">
+                     <desc>Declaration of boolean type</desc>
+                     <content>
+                        <dataRef name="nonNegativeInteger"/>
+                     </content>
+                  </dataSpec>
 
-                     <attDef ident="rowsep">
-                        <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If
-                           other than zero, display the internal horizontal row ruling below each
-                              <gi>entry</gi> ending in a <gi>row</gi>. </desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="pgwide">
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                  </attList>
-               </elementSpec>
+                  <elementSpec mode="add" ident="calstable"
+                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
+                     <altIdent>table</altIdent>
+                     <desc>The <gi>table</gi> element markup identifies a table.</desc>
+                     <classes>
+                        <memberOf key="model.inter"/>
+                     </classes>
+                     <content>
+                        <elementRef key="calstabletitle" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="tgroup" minOccurs="1" maxOccurs="unbounded"/>
+                     </content>
+                     <attList>
+                        <attDef ident="corresp" ns="http://www.tei-c.org/ns/1.0">
+                           <datatype>
+                              <dataRef key="anyURI"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="style" ns="http://www.iso.org/ns/1.0">
+                           <datatype>
+                              <dataRef key="teidata.text"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="xml:id">
+                           <datatype>
+                              <dataRef key="ID"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="frame">
+                           <desc>Describes position of outer rulings.</desc>
+                           <valList type="closed">
+                              <valItem ident="top"/>
+                              <valItem ident="bottom"/>
+                              <valItem ident="topbot"/>
+                              <valItem ident="all"/>
+                              <valItem ident="sides"/>
+                              <valItem ident="none"/>
+                           </valList>
+                        </attDef>
 
-               <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <desc>Each <gi>tgroup</gi> effectively identifies a new portion of a
-                        <gi>table</gi>.</desc>
-                  <content>
+                        <attDef ident="colsep">
+                           <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>.
+                              If a number other than zero, display the internal column rulings to
+                              the right of each <gi>entry</gi>. </desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
 
-                     <elementRef key="colspec" minOccurs="0" maxOccurs="unbounded"/>
-                     <elementRef key="thead" minOccurs="0" maxOccurs="1"/>
-                     <elementRef key="tbody"/>
-                  </content>
-                  <attList>
-                     <attDef ident="cols" usage="req">
-                        <datatype>
-                           <dataRef name="nonNegativeInteger"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="colsep">
-                        <desc>Provides default for all <gi>colspec</gi>s in this <gi>tgroup</gi>. If
-                           other than zero, display the internal column rulings to the right of
-                              <gi>entry</gi>.</desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="rowsep">
-                        <desc>Provides default for <gi>colspec</gi>s in this <gi>tgroup</gi>. If
-                           other than zero, display the internal horizontal row ruling below each
-                              <gi>entry</gi>.</desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="align">
-                        <desc>Text horizontal position within the column.</desc>
-                        <valList type="closed">
-                           <valItem ident="left"/>
-                           <valItem ident="right"/>
-                           <valItem ident="center"/>
-                           <valItem ident="justify"/>
-                           <valItem ident="char"/>
-                        </valList>
-                     </attDef>
-                  </attList>
-               </elementSpec>
+                        <attDef ident="rowsep">
+                           <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>.
+                              If other than zero, display the internal horizontal row ruling below
+                              each <gi>entry</gi> ending in a <gi>row</gi>. </desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="pgwide">
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
 
-               <elementSpec mode="add" ident="colspec" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <desc>Specifies a column, a vertical portion of a <gi>table</gi>.</desc>
-                  <content>
-                     <empty/>
-                  </content>
-                  <attList>
-                     <attDef ident="colnum">
-                        <desc>Number of column, counting from 1 at left of the table.</desc>
-                        <datatype>
-                           <dataRef name="nonNegativeInteger"/>
-                        </datatype>
-                        <remarks>
-                           <p>The value of colnum is not useful to identify a column in an
-                                 <gi>entry</gi>, so serves no functional purpose other than a
-                              consistency check on the order of the <gi>colspec</gi>s.</p>
-                        </remarks>
-                     </attDef>
-                     <attDef ident="colname">
-                        <desc>Name of column, used to specify the position or horizontal span of
-                           columns in a row by reference in <gi>entry</gi> using colname, namest,
-                           and/or nameend.</desc>
-                        <datatype>
-                           <dataRef key="NMTOKEN"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="colwidth">
-                        <desc>Either proportional measure of the form number* or fixed measure (pt,
-                           pi, pica).</desc>
-                        <datatype>
-                           <dataRef key="teidata.text"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="colsep">
-                        <desc>Default for column ruling to the right of <gi>entry</gi>s starting in
-                           this column (within the <gi>tgroup</gi>).</desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="rowsep">
-                        <desc>Default for row ruling below an <gi>entry</gi> starting in this column
-                           when there is neither a rowsep value on the <gi>entry</gi> nor on the
-                              <gi>row</gi>.</desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
+                  <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901"
+                     module="cals">
+                     <desc>Each <gi>tgroup</gi> effectively identifies a new portion of a
+                           <gi>table</gi>.</desc>
+                     <content>
 
-                        </datatype>
-                     </attDef>
-                     <attDef ident="align">
-                        <desc>Text horizontal position within the column or spanning columns.
-                           Possible default source for <gi>entry</gi>.</desc>
-                        <valList type="closed">
-                           <valItem ident="left"/>
-                           <valItem ident="right"/>
-                           <valItem ident="center"/>
-                           <valItem ident="justify"/>
-                           <valItem ident="char"/>
-                        </valList>
-                     </attDef>
-                     <attDef ident="char">
-                        <datatype>
-                           <dataRef key="teidata.text"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="charoff">
-                        <datatype>
-                           <dataRef key="nonNegativeInteger"/>
-                        </datatype>
-                     </attDef>
-                  </attList>
-               </elementSpec>
+                        <elementRef key="colspec" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="thead" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="tbody"/>
+                     </content>
+                     <attList>
+                        <attDef ident="cols" usage="req">
+                           <datatype>
+                              <dataRef name="nonNegativeInteger"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="colsep">
+                           <desc>Provides default for all <gi>colspec</gi>s in this <gi>tgroup</gi>.
+                              If other than zero, display the internal column rulings to the right
+                              of <gi>entry</gi>.</desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="rowsep">
+                           <desc>Provides default for <gi>colspec</gi>s in this <gi>tgroup</gi>. If
+                              other than zero, display the internal horizontal row ruling below each
+                                 <gi>entry</gi>.</desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="align">
+                           <desc>Text horizontal position within the column.</desc>
+                           <valList type="closed">
+                              <valItem ident="left"/>
+                              <valItem ident="right"/>
+                              <valItem ident="center"/>
+                              <valItem ident="justify"/>
+                              <valItem ident="char"/>
+                           </valList>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
 
-               <elementSpec mode="add" ident="calstabletitle"
-                  ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <altIdent>title</altIdent>
-                  <content>
-                     <macroRef key="macro.paraContent"/>
-                  </content>
-                  <attList>
-                     <attDef ident="xml:id">
-                        <datatype>
-                           <dataRef key="ID"/>
-                        </datatype>
-                     </attDef>
-                  </attList>
-               </elementSpec>
+                  <elementSpec mode="add" ident="colspec"
+                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
+                     <desc>Specifies a column, a vertical portion of a <gi>table</gi>.</desc>
+                     <content>
+                        <empty/>
+                     </content>
+                     <attList>
+                        <attDef ident="colnum">
+                           <desc>Number of column, counting from 1 at left of the table.</desc>
+                           <datatype>
+                              <dataRef name="nonNegativeInteger"/>
+                           </datatype>
+                           <remarks>
+                              <p>The value of colnum is not useful to identify a column in an
+                                    <gi>entry</gi>, so serves no functional purpose other than a
+                                 consistency check on the order of the <gi>colspec</gi>s.</p>
+                           </remarks>
+                        </attDef>
+                        <attDef ident="colname">
+                           <desc>Name of column, used to specify the position or horizontal span of
+                              columns in a row by reference in <gi>entry</gi> using colname, namest,
+                              and/or nameend.</desc>
+                           <datatype>
+                              <dataRef key="NMTOKEN"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="colwidth">
+                           <desc>Either proportional measure of the form number* or fixed measure
+                              (pt, pi, pica).</desc>
+                           <datatype>
+                              <dataRef key="teidata.text"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="colsep">
+                           <desc>Default for column ruling to the right of <gi>entry</gi>s starting
+                              in this column (within the <gi>tgroup</gi>).</desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="rowsep">
+                           <desc>Default for row ruling below an <gi>entry</gi> starting in this
+                              column when there is neither a rowsep value on the <gi>entry</gi> nor
+                              on the <gi>row</gi>.</desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
 
-               <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <desc>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as the
-                     first rows, and again at the top of any continuation after a physical break
-                     between <gi>rows</gi> in <gi>tbody</gi>.</desc>
-                  <content>
-                     <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
-                  </content>
-                  <attList>
-                     <attDef ident="valign">
-                        <desc>Default text vertical positioning within the <gi>entry</gi>s. Provides
-                           default value for <gi>row</gi>s and <gi>entry</gi>s in
-                           <gi>thead</gi>.</desc>
-                        <valList type="closed">
-                           <valItem ident="top"/>
-                           <valItem ident="middle"/>
-                           <valItem ident="bottom"/>
-                        </valList>
-                     </attDef>
-                  </attList>
-               </elementSpec>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="align">
+                           <desc>Text horizontal position within the column or spanning columns.
+                              Possible default source for <gi>entry</gi>.</desc>
+                           <valList type="closed">
+                              <valItem ident="left"/>
+                              <valItem ident="right"/>
+                              <valItem ident="center"/>
+                              <valItem ident="justify"/>
+                              <valItem ident="char"/>
+                           </valList>
+                        </attDef>
+                        <attDef ident="char">
+                           <datatype>
+                              <dataRef key="teidata.text"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="charoff">
+                           <datatype>
+                              <dataRef key="nonNegativeInteger"/>
+                           </datatype>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
 
-               <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <desc>Identifies the body of a <gi>tgroup</gi>.</desc>
-                  <content>
-                     <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
-
-                  </content>
-                  <attList>
-                     <attDef ident="valign">
-                        <desc>Default Text vertical positioning within the <gi>entry</gi>s. Provides
-                           default value for <gi>row</gi> and <gi>entry</gi>s in
-                           <gi>tbody</gi>.</desc>
-                        <valList type="closed">
-                           <valItem ident="top"/>
-                           <valItem ident="middle"/>
-                           <valItem ident="bottom"/>
-                        </valList>
-                     </attDef>
-                  </attList>
-               </elementSpec>
-
-               <elementSpec mode="add" ident="calsrow" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <altIdent>row</altIdent>
-                  <desc>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi>
-                     element. </desc>
-                  <content>
-                     <elementRef key="entry" minOccurs="1" maxOccurs="unbounded"/>
-
-                  </content>
-                  <attList>
-                     <attDef ident="style" ns="http://www.iso.org/ns/1.0">
-                        <datatype>
-                           <dataRef key="teidata.text"/>
-                        </datatype>
-                     </attDef>
-
-                     <attDef ident="rowsep">
-                        <desc>Default for all <gi>entry</gi>s starting in this <gi>row</gi> that do
-                           not specify rowsep. If other than zero, display the internal horizontal
-                           row ruling below an <gi>entry</gi> in the <gi>row</gi>.</desc>
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="valign">
-                        <desc>Text vertical positioning default for <gi>entry</gi>s in a
-                              <gi>row</gi>.</desc>
-                        <valList type="closed">
-                           <valItem ident="top"/>
-                           <valItem ident="middle"/>
-                           <valItem ident="bottom"/>
-                        </valList>
-                     </attDef>
-                  </attList>
-               </elementSpec>
-
-               <!-- module="cals" prefix="cals_"  prefix="cals_" -->
-
-               <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                  <classes>
-                     <memberOf key="att.global.CALSlayout"/>
-                  </classes>
-                  <content>
-                     <alternate>
-                        <!-- #PCDATA in the original spec -->
-                        <textNode/>
-                        <!-- added to provide TEI compatibility -->
-                        <elementRef key="p"/>
-                        <classRef key="model.global"/>
+                  <elementSpec mode="add" ident="calstabletitle"
+                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
+                     <altIdent>title</altIdent>
+                     <content>
                         <macroRef key="macro.paraContent"/>
-                     </alternate>
-                  </content>
-                  <attList>
-                     <attDef ident="style" ns="http://www.iso.org/ns/1.0">
-                        <datatype>
-                           <dataRef key="teidata.text"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="colname">
-                        <desc>Column name of <gi>entry</gi>. Ignore if namest is present. It is an
-                           error if colname is not defined in a <gi>colspec</gi> of the current
-                              <gi>tgroup</gi>.</desc>
-                        <datatype>
-                           <dataRef key="NMTOKEN"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="morerows">
-                        <datatype>
-                           <dataRef key="nonNegativeInteger"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="rotate" validUntil="1996-05-08">
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="char">
-                        <datatype>
-                           <dataRef key="teidata.text"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="charoff">
-                        <datatype>
-                           <dataRef key="nonNegativeInteger"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="valign">
-                        <desc>Text horizontal position within the column or spanning columns.</desc>
-                        <valList type="closed">
-                           <valItem ident="top"/>
-                           <valItem ident="middle"/>
-                           <valItem ident="bottom"/>
-                        </valList>
-                     </attDef>
-                  </attList>
-               </elementSpec>
+                     </content>
+                     <attList>
+                        <attDef ident="xml:id">
+                           <datatype>
+                              <dataRef key="ID"/>
+                           </datatype>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
 
-               <!-- <!ELEMENT spanspec - O EMPTY > 
+                  <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901"
+                     module="cals">
+                     <desc>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as
+                        the first rows, and again at the top of any continuation after a physical
+                        break between <gi>rows</gi> in <gi>tbody</gi>.</desc>
+                     <content>
+                        <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
+                     </content>
+                     <attList>
+                        <attDef ident="valign">
+                           <desc>Default text vertical positioning within the <gi>entry</gi>s.
+                              Provides default value for <gi>row</gi>s and <gi>entry</gi>s in
+                                 <gi>thead</gi>.</desc>
+                           <valList type="closed">
+                              <valItem ident="top"/>
+                              <valItem ident="middle"/>
+                              <valItem ident="bottom"/>
+                           </valList>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
+
+                  <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901"
+                     module="cals">
+                     <desc>Identifies the body of a <gi>tgroup</gi>.</desc>
+                     <content>
+                        <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
+
+                     </content>
+                     <attList>
+                        <attDef ident="valign">
+                           <desc>Default Text vertical positioning within the <gi>entry</gi>s.
+                              Provides default value for <gi>row</gi> and <gi>entry</gi>s in
+                                 <gi>tbody</gi>.</desc>
+                           <valList type="closed">
+                              <valItem ident="top"/>
+                              <valItem ident="middle"/>
+                              <valItem ident="bottom"/>
+                           </valList>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
+
+                  <elementSpec mode="add" ident="calsrow"
+                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
+                     <altIdent>row</altIdent>
+                     <desc>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi>
+                        element. </desc>
+                     <content>
+                        <elementRef key="entry" minOccurs="1" maxOccurs="unbounded"/>
+
+                     </content>
+                     <attList>
+                        <attDef ident="style" ns="http://www.iso.org/ns/1.0">
+                           <datatype>
+                              <dataRef key="teidata.text"/>
+                           </datatype>
+                        </attDef>
+
+                        <attDef ident="rowsep">
+                           <desc>Default for all <gi>entry</gi>s starting in this <gi>row</gi> that
+                              do not specify rowsep. If other than zero, display the internal
+                              horizontal row ruling below an <gi>entry</gi> in the
+                              <gi>row</gi>.</desc>
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="valign">
+                           <desc>Text vertical positioning default for <gi>entry</gi>s in a
+                                 <gi>row</gi>.</desc>
+                           <valList type="closed">
+                              <valItem ident="top"/>
+                              <valItem ident="middle"/>
+                              <valItem ident="bottom"/>
+                           </valList>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
+
+                  <!-- module="cals" prefix="cals_"  prefix="cals_" -->
+
+                  <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901"
+                     module="cals">
+                     <classes>
+                        <memberOf key="att.global.CALSlayout"/>
+                     </classes>
+                     <content>
+                        <alternate>
+                           <!-- #PCDATA in the original spec -->
+                           <textNode/>
+                           <!-- added to provide TEI compatibility -->
+                           <elementRef key="p"/>
+                           <classRef key="model.global"/>
+                           <macroRef key="macro.paraContent"/>
+                        </alternate>
+                     </content>
+                     <attList>
+                        <attDef ident="style" ns="http://www.iso.org/ns/1.0">
+                           <datatype>
+                              <dataRef key="teidata.text"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="colname">
+                           <desc>Column name of <gi>entry</gi>. Ignore if namest is present. It is
+                              an error if colname is not defined in a <gi>colspec</gi> of the
+                              current <gi>tgroup</gi>.</desc>
+                           <datatype>
+                              <dataRef key="NMTOKEN"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="morerows">
+                           <datatype>
+                              <dataRef key="nonNegativeInteger"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="rotate" validUntil="1996-05-08">
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="char">
+                           <datatype>
+                              <dataRef key="teidata.text"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="charoff">
+                           <datatype>
+                              <dataRef key="nonNegativeInteger"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="valign">
+                           <desc>Text horizontal position within the column or spanning
+                              columns.</desc>
+                           <valList type="closed">
+                              <valItem ident="top"/>
+                              <valItem ident="middle"/>
+                              <valItem ident="bottom"/>
+                           </valList>
+                        </attDef>
+                     </attList>
+                  </elementSpec>
+
+                  <!-- <!ELEMENT spanspec - O EMPTY > 
                   <!ATTLIST spanspec
         namest          NMTOKEN                                 #REQUIRED
         nameend         NMTOKEN                                 #REQUIRED
@@ -1064,32 +1077,32 @@
         charoff         NUTOKEN                                 #IMPLIED
 >
                -->
-               
-               <elementSpec ident="spanspec" module="cals" validUntil="1996-05-08">
-                  <classes>
-                     <memberOf key="att.global.CALSlayout"/>
-                  </classes>
-                  <content>
-                     <empty/>
-                  </content>
-               </elementSpec>
+
+                  <elementSpec ident="spanspec" module="cals" validUntil="1996-05-08">
+                     <classes>
+                        <memberOf key="att.global.CALSlayout"/>
+                     </classes>
+                     <content>
+                        <empty/>
+                     </content>
+                  </elementSpec>
 
 
-               <!-- Macros -->
+                  <!-- Macros -->
 
-               <!-- <!ENTITY % tbl.entrytbl.mdl     "colspec*,spanspec*,thead?,tbody"> -->
-               <!-- deplecated
+                  <!-- <!ENTITY % tbl.entrytbl.mdl     "colspec*,spanspec*,thead?,tbody"> -->
+                  <!-- deplecated
                <macroSpec ident="macro.tbl.entrytbl.mdl">
                   <content>
                      <elementRef key="spanspec" minOccurs="0" maxOccurs="unbounded"/>
                   </content>
                </macroSpec>
                -->
-               <!-- <!ENTITY % tbl.entry.mdl        "(para|warning|caution|note|legend|%paracon;)*"> -->
+                  <!-- <!ENTITY % tbl.entry.mdl        "(para|warning|caution|note|legend|%paracon;)*"> -->
 
-               <!-- To be discussed depending on the content model we aim at (e.g. <p> for PDM compatibility) -->
+                  <!-- To be discussed depending on the content model we aim at (e.g. <p> for PDM compatibility) -->
 
-               <!--<macroSpec ident="macro.tbl.entry.mdl">
+                  <!--<macroSpec ident="macro.tbl.entry.mdl">
                   <content>
                      <elementRef key="spanspec" minOccurs="0" maxOccurs="unbounded"/>
                   </content>
@@ -1097,9 +1110,9 @@
                -->
 
 
-               <!-- Attribute classe -->
+                  <!-- Attribute classe -->
 
-               <!-- 
+                  <!-- 
                   namest          NMTOKEN                           #REQUIRED
                   nameend         NMTOKEN                        #REQUIRED
                   spanname        NMTOKEN                       #REQUIRED
@@ -1110,40 +1123,40 @@
                   charoff         NUTOKEN     
  -->
 
-               <classSpec type="atts" ident="att.global.CALSlayout" module="cals">
-                  <attList>
-                     <attDef ident="namest">
-                        <datatype>
-                           <dataRef key="teidata.name"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="nameend">
-                        <datatype>
-                           <dataRef key="teidata.name"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="colsep">
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="rowsep">
-                        <datatype>
-                           <dataRef key="teidata.yesorno"/>
-                        </datatype>
-                     </attDef>
-                     <attDef ident="align">
-                        <valList type="closed">
-                           <valItem ident="left"/>
-                           <valItem ident="right"/>
-                           <valItem ident="center"/>
-                           <valItem ident="justify"/>
-                           <valItem ident="char"/>
-                        </valList>
-                     </attDef>
-                  </attList>
-               </classSpec>
-
+                  <classSpec type="atts" ident="att.global.CALSlayout" module="cals">
+                     <attList>
+                        <attDef ident="namest">
+                           <datatype>
+                              <dataRef key="teidata.name"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="nameend">
+                           <datatype>
+                              <dataRef key="teidata.name"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="colsep">
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="rowsep">
+                           <datatype>
+                              <dataRef key="teidata.yesorno"/>
+                           </datatype>
+                        </attDef>
+                        <attDef ident="align">
+                           <valList type="closed">
+                              <valItem ident="left"/>
+                              <valItem ident="right"/>
+                              <valItem ident="center"/>
+                              <valItem ident="justify"/>
+                              <valItem ident="char"/>
+                           </valList>
+                        </attDef>
+                     </attList>
+                  </classSpec>
+               </specGrp>
             </schemaSpec>
          </div>
       </body>
