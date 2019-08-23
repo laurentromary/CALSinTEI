@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-08-23T11:10:03Z. .
+Schema generated from ODD source 2019-08-23T16:18:45Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -14,421 +14,421 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
-   <define name="cals_macro.paraContent">
+   <define name="macro.paraContent">
       <zeroOrMore>
          <choice>
             <text/>
-            <ref name="cals_model.gLike"/>
-            <ref name="cals_model.phrase"/>
-            <ref name="cals_model.inter"/>
-            <ref name="cals_model.global"/>
+            <ref name="model.gLike"/>
+            <ref name="model.phrase"/>
+            <ref name="model.inter"/>
+            <ref name="model.global"/>
         
-            <ref name="cals_model.lLike"/>
+            <ref name="model.lLike"/>
          </choice>
       </zeroOrMore>
    </define>
-   <define name="cals_model.nameLike.agent">
+   <define name="model.nameLike.agent">
       <notAllowed/>
    </define>
-   <define name="cals_model.nameLike.agent_alternation">
+   <define name="model.nameLike.agent_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.nameLike.agent_sequence">
+   <define name="model.nameLike.agent_sequence">
       <empty/>
    </define>
-   <define name="cals_model.nameLike.agent_sequenceOptional">
+   <define name="model.nameLike.agent_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.nameLike.agent_sequenceOptionalRepeatable">
+   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.nameLike.agent_sequenceRepeatable">
+   <define name="model.nameLike.agent_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.segLike">
+   <define name="model.segLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.hiLike">
+   <define name="model.hiLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.hiLike_alternation">
+   <define name="model.hiLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.hiLike_sequence">
+   <define name="model.hiLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.hiLike_sequenceOptional">
+   <define name="model.hiLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.hiLike_sequenceOptionalRepeatable">
+   <define name="model.hiLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.hiLike_sequenceRepeatable">
+   <define name="model.hiLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.emphLike">
+   <define name="model.emphLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.emphLike_alternation">
+   <define name="model.emphLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.emphLike_sequence">
+   <define name="model.emphLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.emphLike_sequenceOptional">
+   <define name="model.emphLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.emphLike_sequenceOptionalRepeatable">
+   <define name="model.emphLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.emphLike_sequenceRepeatable">
+   <define name="model.emphLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.highlighted">
+   <define name="model.highlighted">
       <choice>
-         <ref name="cals_model.hiLike"/>
-         <ref name="cals_model.emphLike"/>
+         <ref name="model.hiLike"/>
+         <ref name="model.emphLike"/>
       </choice>
    </define>
-   <define name="cals_model.dateLike">
+   <define name="model.dateLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.dateLike_alternation">
+   <define name="model.dateLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.dateLike_sequence">
+   <define name="model.dateLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.dateLike_sequenceOptional">
+   <define name="model.dateLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.dateLike_sequenceOptionalRepeatable">
+   <define name="model.dateLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.dateLike_sequenceRepeatable">
+   <define name="model.dateLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.measureLike">
+   <define name="model.measureLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.measureLike_alternation">
+   <define name="model.measureLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.measureLike_sequence">
+   <define name="model.measureLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.measureLike_sequenceOptional">
+   <define name="model.measureLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.measureLike_sequenceOptionalRepeatable">
+   <define name="model.measureLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.measureLike_sequenceRepeatable">
+   <define name="model.measureLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.egLike">
+   <define name="model.egLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.graphicLike">
+   <define name="model.graphicLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.offsetLike">
+   <define name="model.offsetLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.offsetLike_alternation">
+   <define name="model.offsetLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.offsetLike_sequence">
+   <define name="model.offsetLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.offsetLike_sequenceOptional">
+   <define name="model.offsetLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.offsetLike_sequenceOptionalRepeatable">
+   <define name="model.offsetLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.offsetLike_sequenceRepeatable">
+   <define name="model.offsetLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.msdesc">
+   <define name="model.pPart.msdesc">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.editorial">
+   <define name="model.pPart.editorial">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.editorial_alternation">
+   <define name="model.pPart.editorial_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.editorial_sequence">
+   <define name="model.pPart.editorial_sequence">
       <empty/>
    </define>
-   <define name="cals_model.pPart.editorial_sequenceOptional">
+   <define name="model.pPart.editorial_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.pPart.editorial_sequenceOptionalRepeatable">
+   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.pPart.editorial_sequenceRepeatable">
+   <define name="model.pPart.editorial_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.transcriptional">
+   <define name="model.pPart.transcriptional">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.transcriptional_alternation">
+   <define name="model.pPart.transcriptional_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.transcriptional_sequence">
+   <define name="model.pPart.transcriptional_sequence">
       <empty/>
    </define>
-   <define name="cals_model.pPart.transcriptional_sequenceOptional">
+   <define name="model.pPart.transcriptional_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.pPart.transcriptional_sequenceOptionalRepeatable">
+   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.pPart.transcriptional_sequenceRepeatable">
+   <define name="model.pPart.transcriptional_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.pPart.edit">
+   <define name="model.pPart.edit">
       <choice>
-         <ref name="cals_model.pPart.editorial"/>
-         <ref name="cals_model.pPart.transcriptional"/>
+         <ref name="model.pPart.editorial"/>
+         <ref name="model.pPart.transcriptional"/>
       </choice>
    </define>
-   <define name="cals_model.ptrLike">
+   <define name="model.ptrLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.lPart">
+   <define name="model.lPart">
       <notAllowed/>
    </define>
-   <define name="cals_model.global.meta">
+   <define name="model.global.meta">
       <notAllowed/>
    </define>
-   <define name="cals_model.milestoneLike">
+   <define name="model.milestoneLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.gLike">
+   <define name="model.gLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.oddDecl">
+   <define name="model.oddDecl">
       <notAllowed/>
    </define>
-   <define name="cals_model.phrase.xml">
+   <define name="model.phrase.xml">
       <notAllowed/>
    </define>
-   <define name="cals_model.specDescLike">
+   <define name="model.specDescLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.biblLike">
+   <define name="model.biblLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.labelLike">
+   <define name="model.labelLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.listLike">
+   <define name="model.listLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.noteLike">
+   <define name="model.noteLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.lLike">
+   <define name="model.lLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.stageLike">
+   <define name="model.stageLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.global.edit">
+   <define name="model.global.edit">
       <notAllowed/>
    </define>
-   <define name="cals_model.placeNamePart">
+   <define name="model.placeNamePart">
       <notAllowed/>
    </define>
-   <define name="cals_model.placeNamePart_alternation">
+   <define name="model.placeNamePart_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.placeNamePart_sequence">
+   <define name="model.placeNamePart_sequence">
       <empty/>
    </define>
-   <define name="cals_model.placeNamePart_sequenceOptional">
+   <define name="model.placeNamePart_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.placeNamePart_sequenceOptionalRepeatable">
+   <define name="model.placeNamePart_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.placeNamePart_sequenceRepeatable">
+   <define name="model.placeNamePart_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.placeStateLike">
+   <define name="model.placeStateLike">
       <choice>
-         <ref name="cals_model.placeNamePart"/>
+         <ref name="model.placeNamePart"/>
       </choice>
    </define>
-   <define name="cals_model.placeStateLike_alternation">
+   <define name="model.placeStateLike_alternation">
       <choice>
-         <ref name="cals_model.placeNamePart_alternation"/>
+         <ref name="model.placeNamePart_alternation"/>
       </choice>
    </define>
-   <define name="cals_model.placeStateLike_sequence">
-      <ref name="cals_model.placeNamePart_sequence"/>
+   <define name="model.placeStateLike_sequence">
+      <ref name="model.placeNamePart_sequence"/>
    </define>
-   <define name="cals_model.placeStateLike_sequenceOptional">
+   <define name="model.placeStateLike_sequenceOptional">
       <optional>
-         <ref name="cals_model.placeNamePart_sequenceOptional"/>
+         <ref name="model.placeNamePart_sequenceOptional"/>
       </optional>
    </define>
-   <define name="cals_model.placeStateLike_sequenceOptionalRepeatable">
+   <define name="model.placeStateLike_sequenceOptionalRepeatable">
       <zeroOrMore>
-         <ref name="cals_model.placeNamePart_sequenceOptionalRepeatable"/>
+         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
       </zeroOrMore>
    </define>
-   <define name="cals_model.placeStateLike_sequenceRepeatable">
+   <define name="model.placeStateLike_sequenceRepeatable">
       <oneOrMore>
-         <ref name="cals_model.placeNamePart_sequenceRepeatable"/>
+         <ref name="model.placeNamePart_sequenceRepeatable"/>
       </oneOrMore>
    </define>
-   <define name="cals_model.quoteLike">
+   <define name="model.quoteLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.quoteLike_alternation">
+   <define name="model.quoteLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.quoteLike_sequence">
+   <define name="model.quoteLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.quoteLike_sequenceOptional">
+   <define name="model.quoteLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.quoteLike_sequenceOptionalRepeatable">
+   <define name="model.quoteLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.quoteLike_sequenceRepeatable">
+   <define name="model.quoteLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.qLike">
+   <define name="model.qLike">
       <choice>
-         <ref name="cals_model.quoteLike"/>
+         <ref name="model.quoteLike"/>
       </choice>
    </define>
-   <define name="cals_model.addressLike">
+   <define name="model.addressLike">
       <notAllowed/>
    </define>
-   <define name="cals_model.addressLike_alternation">
+   <define name="model.addressLike_alternation">
       <notAllowed/>
    </define>
-   <define name="cals_model.addressLike_sequence">
+   <define name="model.addressLike_sequence">
       <empty/>
    </define>
-   <define name="cals_model.addressLike_sequenceOptional">
+   <define name="model.addressLike_sequenceOptional">
       <empty/>
    </define>
-   <define name="cals_model.addressLike_sequenceOptionalRepeatable">
+   <define name="model.addressLike_sequenceOptionalRepeatable">
       <empty/>
    </define>
-   <define name="cals_model.addressLike_sequenceRepeatable">
+   <define name="model.addressLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="cals_model.nameLike">
+   <define name="model.nameLike">
       <choice>
-         <ref name="cals_model.nameLike.agent"/>
-         <ref name="cals_model.offsetLike"/>
-         <ref name="cals_model.placeStateLike"/>
+         <ref name="model.nameLike.agent"/>
+         <ref name="model.offsetLike"/>
+         <ref name="model.placeStateLike"/>
       </choice>
    </define>
-   <define name="cals_model.nameLike_alternation">
+   <define name="model.nameLike_alternation">
       <choice>
-         <ref name="cals_model.nameLike.agent_alternation"/>
-         <ref name="cals_model.offsetLike_alternation"/>
-         <ref name="cals_model.placeStateLike_alternation"/>
+         <ref name="model.nameLike.agent_alternation"/>
+         <ref name="model.offsetLike_alternation"/>
+         <ref name="model.placeStateLike_alternation"/>
       </choice>
    </define>
-   <define name="cals_model.nameLike_sequence">
-      <ref name="cals_model.nameLike.agent_sequence"/>
-      <ref name="cals_model.offsetLike_sequence"/>
-      <ref name="cals_model.placeStateLike_sequence"/>
+   <define name="model.nameLike_sequence">
+      <ref name="model.nameLike.agent_sequence"/>
+      <ref name="model.offsetLike_sequence"/>
+      <ref name="model.placeStateLike_sequence"/>
    </define>
-   <define name="cals_model.nameLike_sequenceOptional">
+   <define name="model.nameLike_sequenceOptional">
       <optional>
-         <ref name="cals_model.nameLike.agent_sequenceOptional"/>
+         <ref name="model.nameLike.agent_sequenceOptional"/>
       </optional>
       <optional>
-         <ref name="cals_model.offsetLike_sequenceOptional"/>
+         <ref name="model.offsetLike_sequenceOptional"/>
       </optional>
       <optional>
-         <ref name="cals_model.placeStateLike_sequenceOptional"/>
+         <ref name="model.placeStateLike_sequenceOptional"/>
       </optional>
    </define>
-   <define name="cals_model.nameLike_sequenceOptionalRepeatable">
+   <define name="model.nameLike_sequenceOptionalRepeatable">
       <zeroOrMore>
-         <ref name="cals_model.nameLike.agent_sequenceOptionalRepeatable"/>
+         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="cals_model.offsetLike_sequenceOptionalRepeatable"/>
+         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="cals_model.placeStateLike_sequenceOptionalRepeatable"/>
+         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
    </define>
-   <define name="cals_model.nameLike_sequenceRepeatable">
+   <define name="model.nameLike_sequenceRepeatable">
       <oneOrMore>
-         <ref name="cals_model.nameLike.agent_sequenceRepeatable"/>
+         <ref name="model.nameLike.agent_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="cals_model.offsetLike_sequenceRepeatable"/>
+         <ref name="model.offsetLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="cals_model.placeStateLike_sequenceRepeatable"/>
+         <ref name="model.placeStateLike_sequenceRepeatable"/>
       </oneOrMore>
    </define>
-   <define name="cals_model.global">
+   <define name="model.global">
       <choice>
-         <ref name="cals_model.global.meta"/>
-         <ref name="cals_model.milestoneLike"/>
-         <ref name="cals_model.noteLike"/>
-         <ref name="cals_model.global.edit"/>
+         <ref name="model.global.meta"/>
+         <ref name="model.milestoneLike"/>
+         <ref name="model.noteLike"/>
+         <ref name="model.global.edit"/>
       </choice>
    </define>
-   <define name="cals_model.pPart.data">
+   <define name="model.pPart.data">
       <choice>
-         <ref name="cals_model.dateLike"/>
-         <ref name="cals_model.measureLike"/>
-         <ref name="cals_model.addressLike"/>
-         <ref name="cals_model.nameLike"/>
+         <ref name="model.dateLike"/>
+         <ref name="model.measureLike"/>
+         <ref name="model.addressLike"/>
+         <ref name="model.nameLike"/>
       </choice>
    </define>
-   <define name="cals_model.inter">
+   <define name="model.inter">
       <choice>
-         <ref name="cals_model.egLike"/>
-         <ref name="cals_model.oddDecl"/>
-         <ref name="cals_model.biblLike"/>
-         <ref name="cals_model.labelLike"/>
-         <ref name="cals_model.listLike"/>
-         <ref name="cals_model.stageLike"/>
-         <ref name="cals_model.qLike"/>
-         <ref name="cals_calstable"/>
+         <ref name="model.egLike"/>
+         <ref name="model.oddDecl"/>
+         <ref name="model.biblLike"/>
+         <ref name="model.labelLike"/>
+         <ref name="model.listLike"/>
+         <ref name="model.stageLike"/>
+         <ref name="model.qLike"/>
+         <ref name="calstable"/>
       </choice>
    </define>
-   <define name="cals_model.phrase">
+   <define name="model.phrase">
       <choice>
-         <ref name="cals_model.segLike"/>
-         <ref name="cals_model.highlighted"/>
-         <ref name="cals_model.graphicLike"/>
-         <ref name="cals_model.pPart.msdesc"/>
-         <ref name="cals_model.pPart.edit"/>
-         <ref name="cals_model.ptrLike"/>
-         <ref name="cals_model.lPart"/>
-         <ref name="cals_model.phrase.xml"/>
-         <ref name="cals_model.specDescLike"/>
-         <ref name="cals_model.pPart.data"/>
+         <ref name="model.segLike"/>
+         <ref name="model.highlighted"/>
+         <ref name="model.graphicLike"/>
+         <ref name="model.pPart.msdesc"/>
+         <ref name="model.pPart.edit"/>
+         <ref name="model.ptrLike"/>
+         <ref name="model.lPart"/>
+         <ref name="model.phrase.xml"/>
+         <ref name="model.specDescLike"/>
+         <ref name="model.pPart.data"/>
       </choice>
    </define>
-   <define name="cals_calstable">
+   <define name="calstable">
       <element name="table" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The table element markup identifies a table.</a:documentation>
          <optional>
-            <ref name="cals_calstabletitle"/>
+            <ref name="calstabletitle"/>
          </optional>
          <oneOrMore>
-            <ref name="cals_tgroup"/>
+            <ref name="tgroup"/>
          </oneOrMore>
          <optional>
             <attribute name="corresp" ns="http://www.tei-c.org/ns/1.0">
@@ -486,16 +486,16 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_tgroup">
+   <define name="tgroup">
       <element name="tgroup" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Each tgroup effectively identifies a new portion of a table.</a:documentation>
          <zeroOrMore>
-            <ref name="cals_colspec"/>
+            <ref name="colspec"/>
          </zeroOrMore>
          <optional>
-            <ref name="cals_thead"/>
+            <ref name="thead"/>
          </optional>
-         <ref name="cals_tbody"/>
+         <ref name="tbody"/>
          <attribute name="cols">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <data type="nonNegativeInteger"/>
@@ -532,7 +532,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_colspec">
+   <define name="colspec">
       <element name="colspec" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a column, a vertical portion of a table.</a:documentation>
          <empty/>
@@ -596,10 +596,10 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_calstabletitle">
+   <define name="calstabletitle">
       <element name="title" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <ref name="cals_macro.paraContent"/>
+         <ref name="macro.paraContent"/>
          <optional>
             <attribute name="xml:id">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -608,11 +608,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_thead">
+   <define name="thead">
       <element name="thead" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the heading rows of a tgroup, displayed as the first rows, and again at the top of any continuation after a physical break between rows in tbody.</a:documentation>
          <oneOrMore>
-            <ref name="cals_calsrow"/>
+            <ref name="calsrow"/>
          </oneOrMore>
          <optional>
             <attribute name="valign">
@@ -630,11 +630,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_tbody">
+   <define name="tbody">
       <element name="tbody" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the body of a tgroup.</a:documentation>
          <oneOrMore>
-            <ref name="cals_calsrow"/>
+            <ref name="calsrow"/>
          </oneOrMore>
          <optional>
             <attribute name="valign">
@@ -652,11 +652,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_calsrow">
+   <define name="calsrow">
       <element name="row" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the row information in a thead or tbody element.</a:documentation>
          <oneOrMore>
-            <ref name="cals_entry"/>
+            <ref name="entry"/>
          </oneOrMore>
          <optional>
             <attribute name="style" ns="http://www.iso.org/ns/1.0">
@@ -686,15 +686,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_entry">
+   <define name="entry">
       <element name="entry" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <choice>
             <text/>
-            <ref name="cals_model.global"/>
-            <ref name="cals_macro.paraContent"/>
+            <ref name="model.global"/>
+            <ref name="macro.paraContent"/>
          </choice>
-         <ref name="cals_att.global.CALSlayout.attributes"/>
+         <ref name="att.global.CALSlayout.attributes"/>
          <optional>
             <attribute name="style" ns="http://www.iso.org/ns/1.0">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -744,14 +744,14 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="cals_att.global.CALSlayout.attributes">
-      <ref name="cals_att.global.CALSlayout.attribute.namest"/>
-      <ref name="cals_att.global.CALSlayout.attribute.nameend"/>
-      <ref name="cals_att.global.CALSlayout.attribute.colsep"/>
-      <ref name="cals_att.global.CALSlayout.attribute.rowsep"/>
-      <ref name="cals_att.global.CALSlayout.attribute.align"/>
+   <define name="att.global.CALSlayout.attributes">
+      <ref name="att.global.CALSlayout.attribute.namest"/>
+      <ref name="att.global.CALSlayout.attribute.nameend"/>
+      <ref name="att.global.CALSlayout.attribute.colsep"/>
+      <ref name="att.global.CALSlayout.attribute.rowsep"/>
+      <ref name="att.global.CALSlayout.attribute.align"/>
    </define>
-   <define name="cals_att.global.CALSlayout.attribute.namest">
+   <define name="att.global.CALSlayout.attribute.namest">
       <optional>
          <attribute name="namest">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -759,7 +759,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </attribute>
       </optional>
    </define>
-   <define name="cals_att.global.CALSlayout.attribute.nameend">
+   <define name="att.global.CALSlayout.attribute.nameend">
       <optional>
          <attribute name="nameend">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -767,7 +767,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </attribute>
       </optional>
    </define>
-   <define name="cals_att.global.CALSlayout.attribute.colsep">
+   <define name="att.global.CALSlayout.attribute.colsep">
       <optional>
          <attribute name="colsep">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -775,7 +775,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </attribute>
       </optional>
    </define>
-   <define name="cals_att.global.CALSlayout.attribute.rowsep">
+   <define name="att.global.CALSlayout.attribute.rowsep">
       <optional>
          <attribute name="rowsep">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -783,7 +783,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </attribute>
       </optional>
    </define>
-   <define name="cals_att.global.CALSlayout.attribute.align">
+   <define name="att.global.CALSlayout.attribute.align">
       <optional>
          <attribute name="align">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -803,8 +803,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
       </optional>
    </define>
    <start>
-      <choice>
-         <ref name="cals_calstable"/>
-      </choice>
+      <choice/>
    </start>
 </grammar>
