@@ -711,11 +711,11 @@
             <head>Specification</head>
             <schemaSpec ident="calsModel" start="calstable">
                
+               <moduleRef key="tei"/>
+               
                <specGrpRef target="#cals"/>
                <specGrp xml:id="cals">
-
-                  <moduleRef key="tei"/>
-
+                  
                   <moduleSpec ident="cals"/>
 
                   <dataSpec ident="teidata.yesorno" module="cals">
