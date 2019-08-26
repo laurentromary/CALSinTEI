@@ -26,7 +26,7 @@
                <moduleRef key="textstructure" except=""/>
                <moduleRef key="figures" except=""/>
                <specGrpRef target="CALSinPureODD.odd#cals" />
-               <xi:include href="CALSinPureODD.odd" xpointer="cals"/>
+               <!--<xi:include href="CALSinPureODD.odd" xpointer="cals"/>-->
             </schemaSpec>
          </div>
       </body>

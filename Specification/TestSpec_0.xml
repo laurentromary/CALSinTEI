@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="out/CALSinPureODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <table xmlns="http://www.oasis-open.org/specs/tm9901" colsep="0" rowsep="0" frame="bottom" pgwide="0">
+    <title>...</title>
     <tgroup cols="0">
         <colspec colnum="1" align="center" char="" charoff="" colname="" colsep="2" colwidth=""
             rowsep="0"/>

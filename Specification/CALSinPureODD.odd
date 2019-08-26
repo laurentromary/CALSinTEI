@@ -27,26 +27,22 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <bibl><title>EXCHANGE TABLE MODEL DOCUMENT TYPE DEFINITION</title> SGML Open Technical
-               Resolution TR 9503:1995 Harvey Bingham, Interleaf, Chair, Table Interchange
-               Subcommittee, SGML Open Revision date: 1996 May 8 Copyright © 1995, 1996 by OASIS
-                  <note>This SGML Open Technical Resolution defines an Exchange subset of the full
-                  CALS table model DTD described in SGML Open Technical Memorandum TM 9502:1995.
-                  This Exchange subset has been chosen as being a useful subset of the complete CALS
-                  table model such that, if an application's tables are tagged according to this
-                  subset, there is a high probability that the table will be interoperable among the
-                  great majority of SGML Open vendor products. See also the SGML Open Technical
-                  Research Paper TRP 9501:1995 on Table Interoperability: Issues for the CALS table
-                  model. </note><note> Note that the set of element and attribute declarations in
-                  the markup declaration module section of this document partially defines the
-                  Exchange table model. However, the model is not well-defined without the
-                  accompanying natural language description of the semantics (meanings) of these
-                  various elements, attributes, and attribute values. The semantic writeup, in the
-                  section following that containing the markup declaration module, must be used in
-                  conjunction with the element and attribute declarations. </note><note> SGML Open
-                  Technical Resolution TR 9503:1995<lb/> Committee Draft: 1995 November 21<lb/>
-                  Final Draft Technical Resolution: 1996 January 12<lb/> Final Technical Resolution:
-                  1996 May 8</note>
+            <bibl><title>EXCHANGE TABLE MODEL DOCUMENT TYPE DEFINITION</title> SGML Open Technical Resolution TR
+               9503:1995 Harvey Bingham, Interleaf, Chair, Table Interchange Subcommittee, SGML Open Revision date: 1996
+               May 8 Copyright © 1995, 1996 by OASIS <note>This SGML Open Technical Resolution defines an Exchange
+                  subset of the full CALS table model DTD described in SGML Open Technical Memorandum TM 9502:1995. This
+                  Exchange subset has been chosen as being a useful subset of the complete CALS table model such that,
+                  if an application's tables are tagged according to this subset, there is a high probability that the
+                  table will be interoperable among the great majority of SGML Open vendor products. See also the SGML
+                  Open Technical Research Paper TRP 9501:1995 on Table Interoperability: Issues for the CALS table
+                  model. </note><note> Note that the set of element and attribute declarations in the markup declaration
+                  module section of this document partially defines the Exchange table model. However, the model is not
+                  well-defined without the accompanying natural language description of the semantics (meanings) of
+                  these various elements, attributes, and attribute values. The semantic writeup, in the section
+                  following that containing the markup declaration module, must be used in conjunction with the element
+                  and attribute declarations. </note><note> SGML Open Technical Resolution TR 9503:1995<lb/> Committee
+                  Draft: 1995 November 21<lb/> Final Draft Technical Resolution: 1996 January 12<lb/> Final Technical
+                  Resolution: 1996 May 8</note>
             </bibl>
          </sourceDesc>
       </fileDesc>
@@ -55,19 +51,18 @@
       <body>
          <div type="introduction">
             <head>Introduction</head>
-            <p>This SGML Open Technical Resolution defines an Exchange subset of the full CALS table
-               model DTD described in SGML Open Technical Memorandum TM 9502:1995. This Exchange
-               subset has been chosen as being a useful subset of the complete CALS table model such
-               that, if an application's tables are tagged according to this subset, there is a high
-               probability that the table will be interoperable among the great majority of SGML
-               Open vendor products. See also the SGML Open Technical Research Paper TRP 9501:1995
-               on Table Interoperability.</p>
-            <p>Specific changes of substance between this Exchange Model and the CALS table model
-               contained in the Example DTD published in MIL-HDBK-28001 (30 June 95) include: <list>
-                  <item>allow content model for table to include title on the graphic+ form of table
-                     content when there are no tgroups;</item>
-                  <item>change most explicit attribute defaults from value to #IMPLIED to allow
-                     value inheritance, possibly from a style sheet;</item>
+            <p>This SGML Open Technical Resolution defines an Exchange subset of the full CALS table model DTD described
+               in SGML Open Technical Memorandum TM 9502:1995. This Exchange subset has been chosen as being a useful
+               subset of the complete CALS table model such that, if an application's tables are tagged according to
+               this subset, there is a high probability that the table will be interoperable among the great majority of
+               SGML Open vendor products. See also the SGML Open Technical Research Paper TRP 9501:1995 on Table
+               Interoperability.</p>
+            <p>Specific changes of substance between this Exchange Model and the CALS table model contained in the
+               Example DTD published in MIL-HDBK-28001 (30 June 95) include: <list>
+                  <item>allow content model for table to include title on the graphic+ form of table content when there
+                     are no tgroups;</item>
+                  <item>change most explicit attribute defaults from value to #IMPLIED to allow value inheritance,
+                     possibly from a style sheet;</item>
                   <item>eliminate <gi>entrytbl</gi>;</item>
                   <item>eliminate <gi>tfoot</gi>;</item>
                   <item>eliminate <gi>spanspec</gi>;</item>
@@ -77,26 +72,23 @@
                </list>
             </p>
             <p>Finally, this declaration set is assigned a Formal Public Identifier.</p>
-            <p>Note that the set of element and attribute declarations in the next section of this
-               document partially defines the Exchange table model. However, the model is not
-               well-defined without the accompanying natural language description of the semantics
-               (meanings) of these various elements, attributes, and attribute values. The semantic
-               writeup, in the section following that containing the markup declaration module, must
-               be used in conjunction with the element and attribute declarations. </p>
-            <p>The following markup declaration module defines parameter entities for various parts
-               of the model. This organization provides for more flexibility in using this module in
-               different circumstances. However, it must be realized that overriding declarations of
-               these parameter entities that enlarge the model (i.e., that define a superset of the
-               model or a different model) may reduce practical interoperability. It is therefore
-               recommended that the parameter entities be used primarily to define a subset of the
-               default model. Any parameter entity redefinition other than to define a more
-               constrained model than the default model must be done carefully with the knowledge of
-               ones target toolset's capabilities and with the realization that interoperability may
-               be reduced. The portion of the model where constraining changes only are reasonable
-               is its geometric aspects, including some table attributes, and the elements and
-               attributes of the table structure: tgroup through row and some entry attributes. The
-               table content model and its exceptions other than table self-exclusion and the entry
-               content model and its exceptions are candidates for change. </p>
+            <p>Note that the set of element and attribute declarations in the next section of this document partially
+               defines the Exchange table model. However, the model is not well-defined without the accompanying natural
+               language description of the semantics (meanings) of these various elements, attributes, and attribute
+               values. The semantic writeup, in the section following that containing the markup declaration module,
+               must be used in conjunction with the element and attribute declarations. </p>
+            <p>The following markup declaration module defines parameter entities for various parts of the model. This
+               organization provides for more flexibility in using this module in different circumstances. However, it
+               must be realized that overriding declarations of these parameter entities that enlarge the model (i.e.,
+               that define a superset of the model or a different model) may reduce practical interoperability. It is
+               therefore recommended that the parameter entities be used primarily to define a subset of the default
+               model. Any parameter entity redefinition other than to define a more constrained model than the default
+               model must be done carefully with the knowledge of ones target toolset's capabilities and with the
+               realization that interoperability may be reduced. The portion of the model where constraining changes
+               only are reasonable is its geometric aspects, including some table attributes, and the elements and
+               attributes of the table structure: tgroup through row and some entry attributes. The table content model
+               and its exceptions other than table self-exclusion and the entry content model and its exceptions are
+               candidates for change. </p>
          </div>
          <div type="documentation">
             <head>Documentation</head>
@@ -105,76 +97,63 @@
                <div n="1.1">
                   <head>General</head>
                   <p> The <gi>table</gi> element markup identifies a table. </p>
-                  <p> Values of attributes on the <gi>table</gi> element may at times be inherited
-                     to be used as defaults for its contained elements. Furthermore, a
-                        <gi>table</gi> element may have some style specification associated with it
-                     that may provide default values for some or all of its attributes. If a
-                        <gi>table</gi> element has no explicit specification for an attribute but
-                     does have an associated style sheet that gives a specification for this
-                     attribute, then this value shall be used as the value that is inherited from
-                     this element. </p>
+                  <p> Values of attributes on the <gi>table</gi> element may at times be inherited to be used as
+                     defaults for its contained elements. Furthermore, a <gi>table</gi> element may have some style
+                     specification associated with it that may provide default values for some or all of its attributes.
+                     If a <gi>table</gi> element has no explicit specification for an attribute but does have an
+                     associated style sheet that gives a specification for this attribute, then this value shall be used
+                     as the value that is inherited from this element. </p>
                </div>
                <div n="1.2">
                   <head>Optional attributes</head>
                   <div n="1.2.1">
                      <head><att>frame</att> outer table ruling</head>
                      <p>Describes position of outer rulings.</p>
-                     <p>Declared value: sides (left and right), top (below title), bottom (after
-                        last <gi>row</gi>), topbot (both top and bottom), all (all of above), or
-                        none (none of above). The outer rulings appear in place of and in the space
-                        that would otherwise be taken by horizontal and vertical rulings on the
-                        outsides of those entries that appear at the edges of the table.</p>
-                     <p>Default: IMPLIED (implies value from style specification if available, if
-                        not, implies "all"). </p>
+                     <p>Declared value: sides (left and right), top (below title), bottom (after last <gi>row</gi>),
+                        topbot (both top and bottom), all (all of above), or none (none of above). The outer rulings
+                        appear in place of and in the space that would otherwise be taken by horizontal and vertical
+                        rulings on the outsides of those entries that appear at the edges of the table.</p>
+                     <p>Default: IMPLIED (implies value from style specification if available, if not, implies "all").
+                     </p>
                   </div>
                   <div n="1.2.2">
                      <head><att>colsep</att> column separators (vertical ruling)</head>
-                     <p>Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If a
-                        number other than zero, display the internal column rulings to the right of
-                        each <gi>entry</gi>; if zero, do not display them. Ignored for the rightmost
-                        column, where the frame setting applies.</p>
+                     <p>Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If a number other than zero,
+                        display the internal column rulings to the right of each <gi>entry</gi>; if zero, do not display
+                        them. Ignored for the rightmost column, where the frame setting applies.</p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
-                     <p>Default: IMPLIED (implies value from style specification if available, if
-                        not, implies "1").</p>
+                     <p>Default: IMPLIED (implies value from style specification if available, if not, implies "1").</p>
                   </div>
                   <div n="1.2.3">
                      <head><att>rowsep</att> row separators (horizontal ruling)</head>
-                     <p>Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If other
-                        than zero, display the internal horizontal row ruling below each
-                           <gi>entry</gi> ending in a <gi>row</gi>. If zero, do not display them.
-                        Ignored for the last <gi>row</gi> of the <gi>table</gi> (i.e., the last
-                           <gi>row</gi> of the last <gi>tgroup</gi> in this <gi>table</gi>), where
-                        the frame value applies.</p>
+                     <p>Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If other than zero, display
+                        the internal horizontal row ruling below each <gi>entry</gi> ending in a <gi>row</gi>. If zero,
+                        do not display them. Ignored for the last <gi>row</gi> of the <gi>table</gi> (i.e., the last
+                           <gi>row</gi> of the last <gi>tgroup</gi> in this <gi>table</gi>), where the frame value
+                        applies.</p>
                      <p> Declared value: %yesorno; (nonNegativeInteger; old: NUMBER)</p>
-                     <p>Default: IMPLIED (implies value from style specification if available, if
-                        not, implies "1").</p>
+                     <p>Default: IMPLIED (implies value from style specification if available, if not, implies "1").</p>
                   </div>
                   <div n="1.2.4">
                      <head><att>pgwide</att> make table span full page width</head>
-                     <p>If zero, the maximum available width for the <gi>table</gi> is the (galley)
-                        width (possibly respecting current indents in force as specified by the
-                        style sheet) of the current column of the orient="port" page. If a specified
-                        value other than zero, the <gi>table</gi> spans the width of the entire page
-                        (possibly causing any previous multicolumn text on the page to be balanced
-                        and any extra processing associated with column balancing and page spanning
-                        to be performed). This attribute is ignored when orient="land" where all
-                        tables are treated as if pgwide="1".</p>
+                     <p>If zero, the maximum available width for the <gi>table</gi> is the (galley) width (possibly
+                        respecting current indents in force as specified by the style sheet) of the current column of
+                        the orient="port" page. If a specified value other than zero, the <gi>table</gi> spans the width
+                        of the entire page (possibly causing any previous multicolumn text on the page to be balanced
+                        and any extra processing associated with column balancing and page spanning to be performed).
+                        This attribute is ignored when orient="land" where all tables are treated as if pgwide="1".</p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
-                     <p>Default: IMPLIED (implies value from the style specification if available).
-                        In the absence of an explicit value (or one implied from the style
-                        specification), the system should attempt to format the table into a galley
-                        column if reasonable, based on explicit <gi>colspec</gi> colwidth values,
-                        galley column width, and possible table indentation implied by context. If
-                        any relative width specifications exist, they should continue to apply, but
-                        the unit proportion should be first based on the width uncommitted from the
-                        galley column.</p>
-                     <p>In the above paragraph, "if reasonable" is intended to preclude a system
-                        generating columns so narrow that the entry content is obscured by awkward
-                        line folding, or clipping. For align=char, the content either side of the
-                        alignment character should also be considered. No explicit algorithm for
-                        determining when a table will fit is provided. Because of the uncertainty in
-                        meaning, interchange of a table should include an explicit value for
-                        pgwide.</p>
+                     <p>Default: IMPLIED (implies value from the style specification if available). In the absence of an
+                        explicit value (or one implied from the style specification), the system should attempt to
+                        format the table into a galley column if reasonable, based on explicit <gi>colspec</gi> colwidth
+                        values, galley column width, and possible table indentation implied by context. If any relative
+                        width specifications exist, they should continue to apply, but the unit proportion should be
+                        first based on the width uncommitted from the galley column.</p>
+                     <p>In the above paragraph, "if reasonable" is intended to preclude a system generating columns so
+                        narrow that the entry content is obscured by awkward line folding, or clipping. For align=char,
+                        the content either side of the alignment character should also be considered. No explicit
+                        algorithm for determining when a table will fit is provided. Because of the uncertainty in
+                        meaning, interchange of a table should include an explicit value for pgwide.</p>
                   </div>
                </div>
             </div>
@@ -182,57 +161,47 @@
                <head>Element and attribute description for <gi>tgroup</gi></head>
                <div n="2.1">
                   <head>General</head>
-                  <p> Each <gi>tgroup</gi> effectively identifies a new portion of a <gi>table</gi>.
-                     The <gi>colspec</gi>s and the colnames in each <gi>tgroup</gi> are independent
-                     of any other <gi>tgroup</gi>. The <gi>colspec</gi>s in a <gi>tgroup</gi> apply
-                     to its <gi>tbody</gi>. The <gi>colspec</gi>s in a <gi>tgroup</gi> shall be in
-                     left-to-right column order. Explicit colnums in the different <gi>colspec</gi>s
-                     of a <gi>tgroup</gi> shall be unique, in ascending order left-to-right, in the
-                     range 1 to the number of <gi>colspec</gi>s, which is not to exceed the value of
-                     the cols attribute of <gi>tgroup</gi>. </p>
-                  <p>The colnames in the different <gi>colspec</gi>s of a <gi>tgroup</gi> shall be
-                     unique. (A colname may have the same value as the colnum of the same
-                        <gi>colspec</gi> if restricted to digits.) The <gi>colspec</gi>s of
-                        <gi>tbody</gi> also apply to <gi>thead</gi>.</p>
-                  <p>All <gi>tgroup</gi>s of a <gi>table</gi> shall have the same width, so the
-                        <gi>table</gi> frame can surround them uniformly. Each <gi>thead</gi> and
-                        <gi>tbody</gi> has that total width as well. For each <gi>tgroup</gi>, let
-                     the minimum <gi>tgroup</gi> width be the sum of the fixed portions of the set
-                     of <gi>colspec</gi> colwidths in that <gi>tgroup</gi> which should not exceed
-                     the indicated total width, determined from the <gi>table</gi> pgwide attribute.
-                     If pgwide="0", the target total width is the galley column width, possibly
-                     reduced by the current indents in force; if pgwide is non-zero, the target
-                     total width is the full page width. The minimum <gi>table</gi> width shall be
+                  <p> Each <gi>tgroup</gi> effectively identifies a new portion of a <gi>table</gi>. The
+                        <gi>colspec</gi>s and the colnames in each <gi>tgroup</gi> are independent of any other
+                        <gi>tgroup</gi>. The <gi>colspec</gi>s in a <gi>tgroup</gi> apply to its <gi>tbody</gi>. The
+                        <gi>colspec</gi>s in a <gi>tgroup</gi> shall be in left-to-right column order. Explicit colnums
+                     in the different <gi>colspec</gi>s of a <gi>tgroup</gi> shall be unique, in ascending order
+                     left-to-right, in the range 1 to the number of <gi>colspec</gi>s, which is not to exceed the value
+                     of the cols attribute of <gi>tgroup</gi>. </p>
+                  <p>The colnames in the different <gi>colspec</gi>s of a <gi>tgroup</gi> shall be unique. (A colname
+                     may have the same value as the colnum of the same <gi>colspec</gi> if restricted to digits.) The
+                        <gi>colspec</gi>s of <gi>tbody</gi> also apply to <gi>thead</gi>.</p>
+                  <p>All <gi>tgroup</gi>s of a <gi>table</gi> shall have the same width, so the <gi>table</gi> frame can
+                     surround them uniformly. Each <gi>thead</gi> and <gi>tbody</gi> has that total width as well. For
+                     each <gi>tgroup</gi>, let the minimum <gi>tgroup</gi> width be the sum of the fixed portions of the
+                     set of <gi>colspec</gi> colwidths in that <gi>tgroup</gi> which should not exceed the indicated
+                     total width, determined from the <gi>table</gi> pgwide attribute. If pgwide="0", the target total
+                     width is the galley column width, possibly reduced by the current indents in force; if pgwide is
+                     non-zero, the target total width is the full page width. The minimum <gi>table</gi> width shall be
                      the maximum of all the minimum <gi>tgroup</gi> widths.</p>
-                  <p>The total width for any <gi>tgroup</gi> may be specified with some columns
-                     having fixed colwidths and others having proportional widths. When no
-                     proportional width are specified for a given <gi>tgroup</gi>, the width of that
-                        <gi>tgroup</gi> shall be the sum of the fixed widths of the columns. When
-                     any proportional widths are specified, the unit proportion is determined by
-                     starting with the target table width determined from the <gi>table</gi> pgwide
-                     value non-zero for full width, "0" for galley column width (possibly affected
-                     by current indents). Reduce that by the sum of border widths and column ruling
-                     widths and the fixed colwidths to get the available proportional width. Sum the
-                     proportional factors N over all columns with proportional parts "N*" and
-                     including "1*" for each implicit colwidth when the value of the <gi>tgroup</gi>
-                     cols exceeds the number of <gi>colspec</gi>s in that <gi>tgroup</gi>. Then the
-                     unit proportion is the available proportional width divided by the sum of the
-                     proportionality factors. Note that the fixed widths for frame and colsep
-                     rulings are deemed to be small and system dependent, not essentially included
+                  <p>The total width for any <gi>tgroup</gi> may be specified with some columns having fixed colwidths
+                     and others having proportional widths. When no proportional width are specified for a given
+                        <gi>tgroup</gi>, the width of that <gi>tgroup</gi> shall be the sum of the fixed widths of the
+                     columns. When any proportional widths are specified, the unit proportion is determined by starting
+                     with the target table width determined from the <gi>table</gi> pgwide value non-zero for full
+                     width, "0" for galley column width (possibly affected by current indents). Reduce that by the sum
+                     of border widths and column ruling widths and the fixed colwidths to get the available proportional
+                     width. Sum the proportional factors N over all columns with proportional parts "N*" and including
+                     "1*" for each implicit colwidth when the value of the <gi>tgroup</gi> cols exceeds the number of
+                        <gi>colspec</gi>s in that <gi>tgroup</gi>. Then the unit proportion is the available
+                     proportional width divided by the sum of the proportionality factors. Note that the fixed widths
+                     for frame and colsep rulings are deemed to be small and system dependent, not essentially included
                      as fixed parts of each colwidth in <gi>colspec</gi>.</p>
-                  <p>If the table fixed widths take up too much of the indicated table width, then
-                     it is up to the output system to resolve the conflict. If there are multiple
-                        <gi>tgroup</gi>s in a single table with fixed widths (i.e., no proportional
-                     parts) such that these fixed widths differ from one another, then it is up to
-                     the output system to determine the interpretation.</p>
-                  <p>Values of attributes on the <gi>tgroup</gi> element may at times be inherited
-                     to be used as defaults for its contained elements. Furthermore, a
-                        <gi>tgroup</gi> element may have some style specification associated with it
-                     that may provide default values for some or all of its attributes. If a
-                        <gi>tgroup</gi> element has no explicit specification for an attribute but
-                     does have an associated style sheet that gives a specification for this
-                     attribute, then this value shall be used as the value that is inherited from
-                     this element. </p>
+                  <p>If the table fixed widths take up too much of the indicated table width, then it is up to the
+                     output system to resolve the conflict. If there are multiple <gi>tgroup</gi>s in a single table
+                     with fixed widths (i.e., no proportional parts) such that these fixed widths differ from one
+                     another, then it is up to the output system to determine the interpretation.</p>
+                  <p>Values of attributes on the <gi>tgroup</gi> element may at times be inherited to be used as
+                     defaults for its contained elements. Furthermore, a <gi>tgroup</gi> element may have some style
+                     specification associated with it that may provide default values for some or all of its attributes.
+                     If a <gi>tgroup</gi> element has no explicit specification for an attribute but does have an
+                     associated style sheet that gives a specification for this attribute, then this value shall be used
+                     as the value that is inherited from this element. </p>
                </div>
                <div n="2.2">
                   <head>Required Attribute</head>
@@ -246,40 +215,34 @@
                   <head>Optional attributes</head>
                   <div n="2.3.1">
                      <head><att>colsep</att> column separators (vertical ruling)</head>
-                     <p>Provides default for all <gi>colspec</gi>s in this <gi>tgroup</gi>. If other
-                        than zero, display the internal column rulings to the right of
-                           <gi>entry</gi>; if zero, do not display them. Ignored for the last
-                        (rightmost) column, where the frame setting applies. Possible default source
-                        for <gi>colspec</gi> or <gi>entry</gi>.</p>
+                     <p>Provides default for all <gi>colspec</gi>s in this <gi>tgroup</gi>. If other than zero, display
+                        the internal column rulings to the right of <gi>entry</gi>; if zero, do not display them.
+                        Ignored for the last (rightmost) column, where the frame setting applies. Possible default
+                        source for <gi>colspec</gi> or <gi>entry</gi>.</p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER)</p>
-                     <p>Default: IMPLIED (implies value from style specification if any, else from
-                           <gi>table</gi>)</p>
+                     <p>Default: IMPLIED (implies value from style specification if any, else from <gi>table</gi>)</p>
                   </div>
                   <div n="2.3.2">
                      <head><att>rowsep</att> row separators (horizontal ruling)</head>
-                     <p>Provides default for <gi>colspec</gi>s in this <gi>tgroup</gi>. If other
-                        than zero, display the internal horizontal row ruling below each
-                           <gi>entry</gi>. If zero, do not display them. Ignored for the last
-                        (bottom) <gi>row</gi> of the <gi>table</gi> where the frame value applies.
-                        In the last <gi>row</gi> in any <gi>tgroup</gi> other than the last (or
-                        only) in the table, the regular <gi>row</gi> or <gi>entry</gi> rowsep
-                        specifications apply. Possible default source for <gi>row</gi> or
-                           <gi>entry</gi>.</p>
+                     <p>Provides default for <gi>colspec</gi>s in this <gi>tgroup</gi>. If other than zero, display the
+                        internal horizontal row ruling below each <gi>entry</gi>. If zero, do not display them. Ignored
+                        for the last (bottom) <gi>row</gi> of the <gi>table</gi> where the frame value applies. In the
+                        last <gi>row</gi> in any <gi>tgroup</gi> other than the last (or only) in the table, the regular
+                           <gi>row</gi> or <gi>entry</gi> rowsep specifications apply. Possible default source for
+                           <gi>row</gi> or <gi>entry</gi>.</p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
-                     <p>Default: IMPLIED (implies value from style specification if any, else from
-                           <gi>table</gi>)</p>
+                     <p>Default: IMPLIED (implies value from style specification if any, else from <gi>table</gi>)</p>
                   </div>
                   <div n="2.3.3">
                      <head><att>align</att> horizontal alignment of table entry content</head>
-                     <p>Text horizontal position within the column. Applies to text that is #PCDATA
-                        or other in-line elements, not further contained in another element with its
-                        own formatting style, such as paragraph, list, or annotation. Default source
-                        for <gi>colspec</gi> align. Possible default source for <gi>entry</gi>.</p>
-                     <p> Declared value: left, (quad flush left), center (centered), right (quad
-                        flush right), justify (both quad left and right), or char (align text to the
-                        leftmost occurrence of the value of the non-null attribute char value.) </p>
-                     <p> Default: IMPLIED (means use value from style specification if any, else
-                        "left".) </p>
+                     <p>Text horizontal position within the column. Applies to text that is #PCDATA or other in-line
+                        elements, not further contained in another element with its own formatting style, such as
+                        paragraph, list, or annotation. Default source for <gi>colspec</gi> align. Possible default
+                        source for <gi>entry</gi>.</p>
+                     <p> Declared value: left, (quad flush left), center (centered), right (quad flush right), justify
+                        (both quad left and right), or char (align text to the leftmost occurrence of the value of the
+                        non-null attribute char value.) </p>
+                     <p> Default: IMPLIED (means use value from style specification if any, else "left".) </p>
                   </div>
                </div>
             </div>
@@ -288,130 +251,114 @@
                </head>
                <div n="3.1">
                   <head> General </head>
-                  <p>Specifies a column, a vertical portion of a <gi>table</gi>. The default values
-                     come from the <gi>tgroup</gi> or <gi>thead</gi> starting the current
-                     (enclosing) group. Each <gi>colspec</gi> is for a single column in
-                     left-to-right order, so it properly has a column number, colnum, implicitly in
-                     order starting from 1, and an optional column name (colname) by which it is
-                     known when referenced by any <gi>entry</gi>. Any references from
-                     <gi>entry</gi>s within the <gi>thead</gi> to colname, namest, or nameend refer
-                     to values defined by the set of <gi>colspec</gi>s in the containing
-                        <gi>tgroup</gi>. <gi>colspec</gi>s from the containing <gi>tgroup</gi> apply
-                     to <gi>thead</gi> and <gi>tbody</gi>.</p>
-                  <p>The number of columns should be determined by the cols attribute on the
-                        <gi>tgroup</gi> element, not by the number of <gi>colspec</gi>s actually
-                     defined. If the number in cols is larger than the number of <gi>colspec</gi>s,
-                     then additional <gi>colspec</gi>s of colwidth "1*" should be inferred.
-                        <gi>Colspec</gi>s can be numbered or unnumbered, and if numbered should be
-                     increasing in sequential order starting with 1 at the left. Unnumbered
-                        <gi>colspec</gi>s are interpreted as being numbered incrementally (one more
-                     than the previous column number), with the first <gi>colspec</gi> starting at
-                     1. It is left up to the implementation how to handle any mismatch in
-                        <gi>colspec</gi> numbering, or a number of <gi>colspec</gi>s greater than
-                     cols. It is recommended that an authoring or editing implementation or any
-                     implementation that verifies the compliance of the table markup to this
-                     Resolution offer the option of producing a warning message when it encounters
-                     such markup. It is an error for an authoring or editing implementation to
-                     produce a table with such conflicting markup.</p>
-                  <p>The char and charoff attributes are allowed on <gi>colspec</gi> as well as on
-                        <gi>entry</gi>. While an implementation should accept these attributes on
-                     either of these elements upon input, it may produce logically equivalent output
-                     that nevertheless differs with respect to these attributes and still be
-                     considered in compliance with the semantics of this resolution. If a table
-                     contains one or more <gi>entry</gi>s with values of either char or charoff that
-                     differ from the value for the same attribute on a <gi>colspec</gi> that
-                     logically contains the <gi>entry</gi>(s), it is left up to the implementation
-                     how this should be handled (i.e., the interpretation of such markup is beyond
-                     the scope of this model). It is recommended that an authoring or editing
-                     implementation or any implementation that verifies the compliance of the table
-                     markup to this Resolution offer the option of producing a warning message when
-                     it encounters such markup. It is an error for an authoring or editing
-                     implementation to produce a table with such conflicting markup.</p>
+                  <p>Specifies a column, a vertical portion of a <gi>table</gi>. The default values come from the
+                        <gi>tgroup</gi> or <gi>thead</gi> starting the current (enclosing) group. Each <gi>colspec</gi>
+                     is for a single column in left-to-right order, so it properly has a column number, colnum,
+                     implicitly in order starting from 1, and an optional column name (colname) by which it is known
+                     when referenced by any <gi>entry</gi>. Any references from <gi>entry</gi>s within the
+                        <gi>thead</gi> to colname, namest, or nameend refer to values defined by the set of
+                        <gi>colspec</gi>s in the containing <gi>tgroup</gi>. <gi>colspec</gi>s from the containing
+                        <gi>tgroup</gi> apply to <gi>thead</gi> and <gi>tbody</gi>.</p>
+                  <p>The number of columns should be determined by the cols attribute on the <gi>tgroup</gi> element,
+                     not by the number of <gi>colspec</gi>s actually defined. If the number in cols is larger than the
+                     number of <gi>colspec</gi>s, then additional <gi>colspec</gi>s of colwidth "1*" should be inferred.
+                        <gi>Colspec</gi>s can be numbered or unnumbered, and if numbered should be increasing in
+                     sequential order starting with 1 at the left. Unnumbered <gi>colspec</gi>s are interpreted as being
+                     numbered incrementally (one more than the previous column number), with the first <gi>colspec</gi>
+                     starting at 1. It is left up to the implementation how to handle any mismatch in <gi>colspec</gi>
+                     numbering, or a number of <gi>colspec</gi>s greater than cols. It is recommended that an authoring
+                     or editing implementation or any implementation that verifies the compliance of the table markup to
+                     this Resolution offer the option of producing a warning message when it encounters such markup. It
+                     is an error for an authoring or editing implementation to produce a table with such conflicting
+                     markup.</p>
+                  <p>The char and charoff attributes are allowed on <gi>colspec</gi> as well as on <gi>entry</gi>. While
+                     an implementation should accept these attributes on either of these elements upon input, it may
+                     produce logically equivalent output that nevertheless differs with respect to these attributes and
+                     still be considered in compliance with the semantics of this resolution. If a table contains one or
+                     more <gi>entry</gi>s with values of either char or charoff that differ from the value for the same
+                     attribute on a <gi>colspec</gi> that logically contains the <gi>entry</gi>(s), it is left up to the
+                     implementation how this should be handled (i.e., the interpretation of such markup is beyond the
+                     scope of this model). It is recommended that an authoring or editing implementation or any
+                     implementation that verifies the compliance of the table markup to this Resolution offer the option
+                     of producing a warning message when it encounters such markup. It is an error for an authoring or
+                     editing implementation to produce a table with such conflicting markup.</p>
                </div>
                <div n="3.2">
                   <head>Optional attributes</head>
                   <div n="3.2.1">
                      <head><att>colnum</att> column number</head>
-                     <p>Number of column, counting from 1 at left of the table. The value of colnum
-                        is not useful to identify a column in an <gi>entry</gi>, so serves no
-                        functional purpose other than a consistency check on the order of the
-                           <gi>colspec</gi>s. </p>
+                     <p>Number of column, counting from 1 at left of the table. The value of colnum is not useful to
+                        identify a column in an <gi>entry</gi>, so serves no functional purpose other than a consistency
+                        check on the order of the <gi>colspec</gi>s. </p>
                      <p>Declared value: nonNegativeInteger (old: NUMBER)</p>
                      <p>Default: IMPLIED (colspec is the next one in order) </p>
                   </div>
                   <div n="3.2.2">
                      <head><att>colname</att> column name</head>
-                     <p>Name of column, used to specify the position or horizontal span of columns
-                        in a row by reference in <gi>entry</gi> using colname, namest, and/or
-                        nameend.</p>
-                     <p> The colname value could be the same as colnum, as its declared value is
-                        NMTOKEN, though there is no such requirement. The name space for colnames is
-                        different for each <gi>tgroup</gi>. </p>
+                     <p>Name of column, used to specify the position or horizontal span of columns in a row by reference
+                        in <gi>entry</gi> using colname, namest, and/or nameend.</p>
+                     <p> The colname value could be the same as colnum, as its declared value is NMTOKEN, though there
+                        is no such requirement. The name space for colnames is different for each <gi>tgroup</gi>. </p>
                      <p>Declared value: NMTOKEN </p>
                      <p>Default: IMPLIED (colspec cannot be referenced without colname) </p>
                   </div>
                   <div n="3.2.3">
                      <head><att>colwidth</att> column width specification</head>
-                     <p>Either proportional measure of the form number*, e.g., "5*" for 5 times the
-                        proportion, or "*" (which is equivalent to "1*"); fixed measure, e.g., 2pt
-                        for 2 point, 3pi for 3 pica. (Mixed measure, e.g., 2*+3pt, while allowed in
-                        the full CALS table model, is not supported in this Exchange model.)
-                        Coefficients are positive integers or fixed point numbers; for fixed point
-                        numbers, a leading (possibly 0) integer part is required, and
-                        implementations should support at least 2 decimal places. A value of "" [the
-                        null string] is treated as a proportional measure of "1*".</p>
-                     <p>The fixed unit values are case insensitive. The standard list of allowed
-                        unit values is "pt" (points), "cm" (centimeters), "mm" (millimeters), "pi"
-                        (picas), and "in" (inches). The default fixed unit should be interpreted as
-                        "pt" if neither a proportion nor a fixed unit is specified.</p>
+                     <p>Either proportional measure of the form number*, e.g., "5*" for 5 times the proportion, or "*"
+                        (which is equivalent to "1*"); fixed measure, e.g., 2pt for 2 point, 3pi for 3 pica. (Mixed
+                        measure, e.g., 2*+3pt, while allowed in the full CALS table model, is not supported in this
+                        Exchange model.) Coefficients are positive integers or fixed point numbers; for fixed point
+                        numbers, a leading (possibly 0) integer part is required, and implementations should support at
+                        least 2 decimal places. A value of "" [the null string] is treated as a proportional measure of
+                        "1*".</p>
+                     <p>The fixed unit values are case insensitive. The standard list of allowed unit values is "pt"
+                        (points), "cm" (centimeters), "mm" (millimeters), "pi" (picas), and "in" (inches). The default
+                        fixed unit should be interpreted as "pt" if neither a proportion nor a fixed unit is
+                        specified.</p>
                      <p> Declared value: (teidata.text; old: CDATA) </p>
                      <p> Default: IMPLIED (means assume a proportional measure of "1*") </p>
                   </div>
                   <div n="3.2.4">
                      <head><att>colsep</att> column separators (vertical ruling)</head>
-                     <p>Default for column ruling to the right of <gi>entry</gi>s starting in this
-                        column (within the <gi>tgroup</gi>).</p>
+                     <p>Default for column ruling to the right of <gi>entry</gi>s starting in this column (within the
+                           <gi>tgroup</gi>).</p>
                      <p>Declared value: (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED, from <gi>tgroup</gi>. </p>
                   </div>
                   <div n="3.2.5">
                      <head><att>rowsep</att> row separators (horizontal ruling)</head>
-                     <p>Default for row ruling below an <gi>entry</gi> starting in this column when
-                        there is neither a rowsep value on the <gi>entry</gi> nor on the
-                           <gi>row</gi> in which the <gi>entry</gi> occurs. Note that with a
-                        non-zero value for morerows on the entry, that ruling will be several rows
+                     <p>Default for row ruling below an <gi>entry</gi> starting in this column when there is neither a
+                        rowsep value on the <gi>entry</gi> nor on the <gi>row</gi> in which the <gi>entry</gi> occurs.
+                        Note that with a non-zero value for morerows on the entry, that ruling will be several rows
                         lower. </p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER)</p>
                      <p>Default: IMPLIED, from <gi>tgroup</gi>. </p>
                   </div>
                   <div n="3.2.6">
                      <head><att>align</att> horizontal alignment of table entry content </head>
-                     <p>Text horizontal position within the column or spanning columns. Possible
-                        default source for <gi>entry</gi>
+                     <p>Text horizontal position within the column or spanning columns. Possible default source for
+                           <gi>entry</gi>
                      </p>
-                     <p>Declared value: left, (quad flush left), center (centered), right (quad
-                        flush right), justify (both quad left and right), or char (positioned by
-                        charoff). </p>
+                     <p>Declared value: left, (quad flush left), center (centered), right (quad flush right), justify
+                        (both quad left and right), or char (positioned by charoff). </p>
                      <p>Default: IMPLIED (means use value from <gi>tgroup</gi>) </p>
                   </div>
                   <div n="3.2.7">
                      <head>
                         <att>char</att> alignment character </head>
-                     <p>Default source for <gi>entry</gi>s starting in this column. If align
-                        ="char", the value is the single alignment character source for any implied
-                        char values for <gi>entry</gi> immediately in this column. The char shall
-                        not be an SDATA entity. A value of "" (the null string) means there is no
-                        aligning character. </p>
+                     <p>Default source for <gi>entry</gi>s starting in this column. If align ="char", the value is the
+                        single alignment character source for any implied char values for <gi>entry</gi> immediately in
+                        this column. The char shall not be an SDATA entity. A value of "" (the null string) means there
+                        is no aligning character. </p>
                      <p>Declared value: (teidata.text; old: CDATA) </p>
                      <p>Default: IMPLIED, means "" (i.e., there is no aligning character). </p>
                   </div>
                   <div n="3.2.8">
                      <head>
                         <att>charoff</att> horizontal offset of alignment character when align=char </head>
-                     <p> Default source for <gi>entry</gi>s starting in this column. For
-                        align="char" on an <gi>entry</gi> in the column, horizontal character offset
-                        is the percent of the current column width to the left of the (left edge of
-                        the) alignment character. </p>
+                     <p> Default source for <gi>entry</gi>s starting in this column. For align="char" on an
+                           <gi>entry</gi> in the column, horizontal character offset is the percent of the current
+                        column width to the left of the (left edge of the) alignment character. </p>
                      <p>Declared value: nonNegativeInteger (old: NUTOKEN) </p>
                      <p>Default: IMPLIED, means "50" (i.e., 50%)</p>
                   </div>
@@ -421,18 +368,16 @@
                <head>Element and attribute description for <gi>thead</gi></head>
                <div n="4.1">
                   <head>General</head>
-                  <p>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as the
-                     first rows, and again at the top of any continuation after a physical break
-                     between <gi>rows</gi> in <gi>tbody</gi>.</p>
-                  <p>The attributes apply from the set of <gi>colspec</gi>s of the containing
-                        <gi>tgroup</gi>. </p>
+                  <p>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as the first rows, and again
+                     at the top of any continuation after a physical break between <gi>rows</gi> in <gi>tbody</gi>.</p>
+                  <p>The attributes apply from the set of <gi>colspec</gi>s of the containing <gi>tgroup</gi>. </p>
                </div>
                <div n="4.2">
                   <head>Optional attributes</head>
                   <div n="4.2.1">
                      <head><att>valign</att> vertical alignment </head>
-                     <p>Default text vertical positioning within the <gi>entry</gi>s. Provides
-                        default value for <gi>row</gi>s and <gi>entry</gi>s in <gi>thead</gi>. </p>
+                     <p>Default text vertical positioning within the <gi>entry</gi>s. Provides default value for
+                           <gi>row</gi>s and <gi>entry</gi>s in <gi>thead</gi>. </p>
                      <p>Declared value: top, middle (approximately vertically centered), or bottom. </p>
                      <p>Default: IMPLIED (implies "bottom"). </p>
                   </div>
@@ -449,8 +394,8 @@
                   <head>Optional attributes </head>
                   <div n="5.2.1">
                      <head><att>valign</att> vertical alignment</head>
-                     <p>Default Text vertical positioning within the <gi>entry</gi>s. Provides
-                        default value for <gi>row</gi> and <gi>entry</gi>s in <gi>tbody</gi>. </p>
+                     <p>Default Text vertical positioning within the <gi>entry</gi>s. Provides default value for
+                           <gi>row</gi> and <gi>entry</gi>s in <gi>tbody</gi>. </p>
                      <p>Declared value: top, middle (approximately vertically centered), or bottom. </p>
                      <p>Default: IMPLIED (implies "top") </p>
                   </div>
@@ -461,33 +406,30 @@
                </head>
                <div n="6.1">
                   <head>General </head>
-                  <p>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi> element.
-                     Default values come from the enclosing <gi>thead</gi>, <gi>tbody</gi>, or
-                        <gi>tgroup</gi> attribute values for like-named attributes. </p>
-                  <p>The number of columns consumed by the <gi>entry</gi>s in a row including their
-                     spans, and by columns encroached by an <gi>entry</gi> with morerows from a
-                     prior row of a <gi>tgroup</gi>, shall not exceed the cols attribute value in
-                     effect for this <gi>tgroup</gi>. It is left up to the implementation how to
-                     handle the situation when more than one <gi>entry</gi> would fill any column of
-                     a <gi>row</gi>, including by horizontal spanning or morerows vertical spanning.
-                     It is recommended that an authoring or editing implementation or any
-                     implementation that verifies the compliance of the table markup to this
-                     Resolution offer the option of producing a warning message when it encounters
-                     such markup. It is an error for an authoring or editing implementation to
+                  <p>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi> element. Default values come
+                     from the enclosing <gi>thead</gi>, <gi>tbody</gi>, or <gi>tgroup</gi> attribute values for
+                     like-named attributes. </p>
+                  <p>The number of columns consumed by the <gi>entry</gi>s in a row including their spans, and by
+                     columns encroached by an <gi>entry</gi> with morerows from a prior row of a <gi>tgroup</gi>, shall
+                     not exceed the cols attribute value in effect for this <gi>tgroup</gi>. It is left up to the
+                     implementation how to handle the situation when more than one <gi>entry</gi> would fill any column
+                     of a <gi>row</gi>, including by horizontal spanning or morerows vertical spanning. It is
+                     recommended that an authoring or editing implementation or any implementation that verifies the
+                     compliance of the table markup to this Resolution offer the option of producing a warning message
+                     when it encounters such markup. It is an error for an authoring or editing implementation to
                      produce a table with such conflicting markup. </p>
-                  <p>If the number of columns consumed is less than the number of columns specified
-                     in the <gi>tgroup</gi>, then missing <gi>entry</gi>s without straddling are
-                     implicitly present, and their colsep and rowsep rulings are inherited. </p>
+                  <p>If the number of columns consumed is less than the number of columns specified in the
+                        <gi>tgroup</gi>, then missing <gi>entry</gi>s without straddling are implicitly present, and
+                     their colsep and rowsep rulings are inherited. </p>
                </div>
                <div n="6.2">
                   <head>Optional attributes</head>
                   <div n="6.2.1">
                      <head><att>rowsep</att></head>
-                     <p>Default for all <gi>entry</gi>s starting in this <gi>row</gi> that do not
-                        specify rowsep. If other than zero, display the internal horizontal row
-                        ruling below an <gi>entry</gi> in the <gi>row</gi>. If zero, do not display
-                        it. Rowsep is ignored for the last <gi>row</gi> of the table where the frame
-                        specification determines the ruling. </p>
+                     <p>Default for all <gi>entry</gi>s starting in this <gi>row</gi> that do not specify rowsep. If
+                        other than zero, display the internal horizontal row ruling below an <gi>entry</gi> in the
+                           <gi>row</gi>. If zero, do not display it. Rowsep is ignored for the last <gi>row</gi> of the
+                        table where the frame specification determines the ruling. </p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED, from the closest element in the inheritance path: <list>
                            <item><gi>tgroup</gi> then</item>
@@ -500,8 +442,8 @@
                      <p>Text vertical positioning default for <gi>entry</gi>s in a <gi>row</gi>. </p>
                      <p> Declared value: top, middle (approximately vertically centered), or bottom. </p>
                      <p> Default: IMPLIED, from the closest element in the inheritance path: <list>
-                           <item>either <gi>thead</gi> or <gi>tgroup</gi>, whichever is the parent
-                              of this <gi>row</gi> then</item>
+                           <item>either <gi>thead</gi> or <gi>tgroup</gi>, whichever is the parent of this <gi>row</gi>
+                              then</item>
                            <item><gi>tgroup</gi>.</item>
                         </list>
                      </p>
@@ -512,35 +454,29 @@
                <head>Element and attribute description for <gi>entry</gi></head>
                <div n="7.1">
                   <head>General</head>
-                  <p>Identifies an <gi>entry</gi> in a <gi>row</gi> of a <gi>thead</gi> or
-                        <gi>tbody</gi> in a <gi>tgroup</gi>.</p>
-                  <p>Default values for colsep, rowsep, valign, align, char, and charoff may come
-                     from like-named attributes from the nearest element identified as influencing
-                     this <gi>entry</gi>. The values may come from <gi>table</gi>, <gi>tgroup</gi>,
-                        <gi>colspec</gi> (defining namest or colname), <gi>tbody</gi>, or
-                        <gi>row</gi>. Note that <gi>colspec</gi> is not strictly in the element
+                  <p>Identifies an <gi>entry</gi> in a <gi>row</gi> of a <gi>thead</gi> or <gi>tbody</gi> in a
+                        <gi>tgroup</gi>.</p>
+                  <p>Default values for colsep, rowsep, valign, align, char, and charoff may come from like-named
+                     attributes from the nearest element identified as influencing this <gi>entry</gi>. The values may
+                     come from <gi>table</gi>, <gi>tgroup</gi>, <gi>colspec</gi> (defining namest or colname),
+                        <gi>tbody</gi>, or <gi>row</gi>. Note that <gi>colspec</gi> is not strictly in the element
                      lineage. </p>
-                  <p>The char and charoff attributes are allowed on <gi>colspec</gi> as well as on
-                        <gi>entry</gi>. While an implementation should accept these attributes on
-                     either of these elements upon input, it may produce logically equivalent output
-                     that nevertheless differs with respect to these attributes and still be
-                     considered in compliance with the semantics of this resolution. A table with
-                     one or more <gi>entry</gi>s with values of either char or charoff that differ
-                     from the value for the same attribute on any other entry in that logical column
-                     or from a <gi>colspec</gi> that logically contains the <gi>entry</gi>(s) does
-                     not conform to the model defined in this Resolution. It is left up to the
-                     implementation receiving such a table to determine how it should be handled. It
-                     is recommended that an authoring or editing implementation or any
-                     implementation that verifies the compliance of the table markup to this
-                     Resolution offer the option of producing a warning message when it encounters
-                     such markup. </p>
-                  <p>An <gi>entry</gi> gets its defaults from its starting column. A row has no
-                     explicit <gi>entry</gi> in any column into which a vertical straddle occurs
-                     because of a morerows=N in an <gi>entry</gi> from a prior row. A spanning
-                        <gi>entry</gi> has no explicit repeated <gi>entry</gi>s in the columns to
-                     the right of the column identified by namest. An <gi>entry</gi> without
-                     specific starting column cannot span, and falls in the next non-straddled and
-                     non-spanned column. </p>
+                  <p>The char and charoff attributes are allowed on <gi>colspec</gi> as well as on <gi>entry</gi>. While
+                     an implementation should accept these attributes on either of these elements upon input, it may
+                     produce logically equivalent output that nevertheless differs with respect to these attributes and
+                     still be considered in compliance with the semantics of this resolution. A table with one or more
+                        <gi>entry</gi>s with values of either char or charoff that differ from the value for the same
+                     attribute on any other entry in that logical column or from a <gi>colspec</gi> that logically
+                     contains the <gi>entry</gi>(s) does not conform to the model defined in this Resolution. It is left
+                     up to the implementation receiving such a table to determine how it should be handled. It is
+                     recommended that an authoring or editing implementation or any implementation that verifies the
+                     compliance of the table markup to this Resolution offer the option of producing a warning message
+                     when it encounters such markup. </p>
+                  <p>An <gi>entry</gi> gets its defaults from its starting column. A row has no explicit <gi>entry</gi>
+                     in any column into which a vertical straddle occurs because of a morerows=N in an <gi>entry</gi>
+                     from a prior row. A spanning <gi>entry</gi> has no explicit repeated <gi>entry</gi>s in the columns
+                     to the right of the column identified by namest. An <gi>entry</gi> without specific starting column
+                     cannot span, and falls in the next non-straddled and non-spanned column. </p>
                   <p> The precedence for determining the column(s) for any <gi>entry</gi> is: <list>
                         <item>span before individual column: <list>
                               <item>namest through nameend</item>
@@ -555,72 +491,63 @@
                      </list>
                   </p>
                   <p>The implicit resolution places the <gi>entry</gi> in the next available column. </p>
-                  <p> There are various markup combinations which this Resolution defines as
-                     "erroneous" and referred to as "errors" in some of the following attribute
-                     descriptions. It is left up to the implementation how to handle each of these
-                     situations: <list>
-                        <item>any column referenced by name (either colname, namest or nameend) is
-                           not a colname of a <gi>colspec</gi> in that <gi>tgroup</gi>; </item>
-                        <item> any of those names are multiply defined in different
-                           <gi>colspec</gi>s of that <gi>tgroup</gi>; </item>
+                  <p> There are various markup combinations which this Resolution defines as "erroneous" and referred to
+                     as "errors" in some of the following attribute descriptions. It is left up to the implementation
+                     how to handle each of these situations: <list>
+                        <item>any column referenced by name (either colname, namest or nameend) is not a colname of a
+                              <gi>colspec</gi> in that <gi>tgroup</gi>; </item>
+                        <item> any of those names are multiply defined in different <gi>colspec</gi>s of that
+                              <gi>tgroup</gi>; </item>
                         <item>any portions of different <gi>entry</gi>s overlap each other; </item>
-                        <item>morerows vertical straddling extends beyond the rows appropriate to
-                           that <gi>thead</gi> or <gi>tbody</gi>; </item>
-                        <item>too many <gi>entry</gi>s occur in any <gi>row</gi>, exceeding the cols
-                           on the <gi>tgroup</gi>; </item>
-                        <item>any colnames used in namest and nameend to define a span in an
-                              <gi>entry</gi> refers to the namest column that is not to the left of
-                           the nameend column; </item>
-                        <item>an <gi>entry</gi> specifies a start column via <gi>entry</gi>'s namest
-                           or colname that is to the left of the column where the <gi>entry</gi>
-                           would be placed by default. </item>
+                        <item>morerows vertical straddling extends beyond the rows appropriate to that <gi>thead</gi> or
+                              <gi>tbody</gi>; </item>
+                        <item>too many <gi>entry</gi>s occur in any <gi>row</gi>, exceeding the cols on the
+                              <gi>tgroup</gi>; </item>
+                        <item>any colnames used in namest and nameend to define a span in an <gi>entry</gi> refers to
+                           the namest column that is not to the left of the nameend column; </item>
+                        <item>an <gi>entry</gi> specifies a start column via <gi>entry</gi>'s namest or colname that is
+                           to the left of the column where the <gi>entry</gi> would be placed by default. </item>
                      </list>
                   </p>
-                  <p>It is recommended that an authoring or editing implementation or any
-                     implementation that verifies the compliance of the table markup to this
-                     Resolution offer the option of producing a warning message when it encounters
-                     such markup. It is an error for an authoring or editing implementation to
-                     produce a table with such markup. If the content of an <gi>entry</gi> is too
-                     deep for the available depth of a page, what information is presented and how
-                     it is presented is left to be determined by the implementation. </p>
+                  <p>It is recommended that an authoring or editing implementation or any implementation that verifies
+                     the compliance of the table markup to this Resolution offer the option of producing a warning
+                     message when it encounters such markup. It is an error for an authoring or editing implementation
+                     to produce a table with such markup. If the content of an <gi>entry</gi> is too deep for the
+                     available depth of a page, what information is presented and how it is presented is left to be
+                     determined by the implementation. </p>
                </div>
                <div n="7.2">
                   <head>Optional attributes </head>
                   <div n="7.2.1">
                      <head><att>colname</att> column name </head>
-                     <p> Column name of <gi>entry</gi>. Ignore if namest is present. It is an error
-                        if colname is not defined in a <gi>colspec</gi> of the current
-                           <gi>tgroup</gi>. </p>
+                     <p> Column name of <gi>entry</gi>. Ignore if namest is present. It is an error if colname is not
+                        defined in a <gi>colspec</gi> of the current <gi>tgroup</gi>. </p>
                      <p>Declared value: NMTOKEN </p>
-                     <p>Default: IMPLIED (column(s) determined by namest or implicitly the next.)
-                     </p>
+                     <p>Default: IMPLIED (column(s) determined by namest or implicitly the next.) </p>
                   </div>
                   <div n="7.2.3">
                      <head><att>nameend</att> name of ending column for this entry </head>
-                     <p>Name of rightmost column of span. The value must be some colname in a
-                           <gi>colspec</gi> of the current <gi>tgroup</gi>. The column must be to
-                        the right of the column identified by namest. Nameend without namest is
-                        ignored. </p>
+                     <p>Name of rightmost column of span. The value must be some colname in a <gi>colspec</gi> of the
+                        current <gi>tgroup</gi>. The column must be to the right of the column identified by namest.
+                        Nameend without namest is ignored. </p>
                      <p>Declared value: teidata.name (old: NMTOKEN) </p>
                      <p>Default: IMPLIED (implies this attribute has no effect on spanning) </p>
                   </div>
                   <div n="7.2.4">
                      <head>
                         <att>morerows</att> number of additional rows in a vertical span </head>
-                     <p>There shall be at least that many more rows in the appropriate
-                           <gi>thead</gi> or <gi>tbody</gi>. Any entries with morerows that would
-                        attempt to extend further downward is an error. The rowsep is determined
-                        when the entry is processed, in the top row if morerows is positive. </p>
+                     <p>There shall be at least that many more rows in the appropriate <gi>thead</gi> or <gi>tbody</gi>.
+                        Any entries with morerows that would attempt to extend further downward is an error. The rowsep
+                        is determined when the entry is processed, in the top row if morerows is positive. </p>
                      <p>Declared value: nonNegativeInteger (old: NUMBER) </p>
                      <p>Default: IMPLIED (interpret as "0") </p>
                   </div>
                   <div n="7.2.5">
                      <head><att>colsep</att> column separators (vertical ruling)</head>
-                     <p>If other than zero, display the internal vertical column ruling at the right
-                        of the <gi>entry</gi>; if zero, do not display it. Ignored for the last
-                        column of a <gi>row</gi>, where the frame setting applies. The colsep value
-                        is determined by the leftmost column of a spanning entry, even though its
-                        effect is on the last column of such spanning entry. </p>
+                     <p>If other than zero, display the internal vertical column ruling at the right of the
+                           <gi>entry</gi>; if zero, do not display it. Ignored for the last column of a <gi>row</gi>,
+                        where the frame setting applies. The colsep value is determined by the leftmost column of a
+                        spanning entry, even though its effect is on the last column of such spanning entry. </p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p>Default: IMPLIED, from the closest element in the inheritance path: <list>
                            <item><gi>colspec</gi> then</item>
@@ -628,18 +555,16 @@
                            <item><gi>table</gi>.</item>
                         </list>
                      </p>
-                     <p>Note that if a <gi>tgroup</gi> or <gi>table</gi> element has no explicit
-                        specification for this attribute but does have an associated style sheet
-                        that gives a specification for this attribute, then this value shall be used
-                        as the value that is inherited from this element. </p>
+                     <p>Note that if a <gi>tgroup</gi> or <gi>table</gi> element has no explicit specification for this
+                        attribute but does have an associated style sheet that gives a specification for this attribute,
+                        then this value shall be used as the value that is inherited from this element. </p>
                   </div>
                   <div n="7.2.6">
                      <head><att>rowsep</att> row separators (horizontal ruling) </head>
-                     <p>If other than zero, display the internal horizontal row ruling below the
-                           <gi>entry</gi>; if zero, do not display it. Ignored for the last
-                           <gi>row</gi> of <gi>tgroup</gi> where the table frame applies. Rowsep for
-                        the entry is determined in the topmost row in which the entry occurs, even
-                        though its effect may be morerows below. </p>
+                     <p>If other than zero, display the internal horizontal row ruling below the <gi>entry</gi>; if
+                        zero, do not display it. Ignored for the last <gi>row</gi> of <gi>tgroup</gi> where the table
+                        frame applies. Rowsep for the entry is determined in the topmost row in which the entry occurs,
+                        even though its effect may be morerows below. </p>
                      <p>Declared value: %yesorno; (nonNegativeInteger; old: NUMBER) </p>
                      <p> Default: IMPLIED, from the closest element in the inheritance path: <list>
                            <item>
@@ -652,44 +577,36 @@
                               <gi>table</gi>.</item>
                         </list>
                      </p>
-                     <p>Note that if a <gi>tgroup</gi> or <gi>table</gi> element has no explicit
-                        specification for this attribute but does have an associated style sheet
-                        that gives a specification for this attribute, then this value shall be used
-                        as the value that is inherited from this element. </p>
+                     <p>Note that if a <gi>tgroup</gi> or <gi>table</gi> element has no explicit specification for this
+                        attribute but does have an associated style sheet that gives a specification for this attribute,
+                        then this value shall be used as the value that is inherited from this element. </p>
                   </div>
                   <div n="7.2.7">
                      <head><att>align</att> horizontal alignment of table entry content </head>
-                     <p>Text horizontal position within the column or spanning columns. Applies to
-                        text that is #PCDATA or other inline elements not further contained in
-                        another element with its own formatting style, such as paragraph, list, or
-                        annotation though such elements could inherit their alignment from this
-                        value. </p>
-                     <p>Declared value: left, (quad flush left), center (centered), right (quad
-                        flush right), justify (both quad left and right), or char (align on leftmost
-                        of char, positioned by charoff). </p>
-                     <p>Default: IMPLIED (means use value from nearest applicable <gi>colspec</gi>
-                        of the nearest ancestral <gi>tgroup</gi>. If none, then "left".) </p>
+                     <p>Text horizontal position within the column or spanning columns. Applies to text that is #PCDATA
+                        or other inline elements not further contained in another element with its own formatting style,
+                        such as paragraph, list, or annotation though such elements could inherit their alignment from
+                        this value. </p>
+                     <p>Declared value: left, (quad flush left), center (centered), right (quad flush right), justify
+                        (both quad left and right), or char (align on leftmost of char, positioned by charoff). </p>
+                     <p>Default: IMPLIED (means use value from nearest applicable <gi>colspec</gi> of the nearest
+                        ancestral <gi>tgroup</gi>. If none, then "left".) </p>
                   </div>
                   <div n="7.2.8">
                      <head>
                         <att>char</att> alignment character </head>
-                     <p>If align="char", the value of the char attribute is the single alignment
-                        character on which the first to occur of this character in the
-                           <gi>entry</gi> is aligned. A value of "" (the null string) means there is
-                        no alignment character. If there is no alignment character or the alignment
-                        character does not occur in the <gi>entry</gi>, the <gi>entry</gi> right
-                        aligns to the left of the charoff position. The value of the char attribute
-                        shall not be an SDATA entity. </p>
+                     <p>If align="char", the value of the char attribute is the single alignment character on which the
+                        first to occur of this character in the <gi>entry</gi> is aligned. A value of "" (the null
+                        string) means there is no alignment character. If there is no alignment character or the
+                        alignment character does not occur in the <gi>entry</gi>, the <gi>entry</gi> right aligns to the
+                        left of the charoff position. The value of the char attribute shall not be an SDATA entity. </p>
                      <p>Declared value: teidata.text (old: CDATA) </p>
-                     <p>Default: IMPLIED, from <gi>colspec</gi> else there is no aligning character.
-                     </p>
+                     <p>Default: IMPLIED, from <gi>colspec</gi> else there is no aligning character. </p>
                   </div>
                   <div n="7.2.9">
-                     <head><att>charoff</att> horizontal offset of alignment character when
-                        align=char </head>
-                     <p>When align="char" for this <gi>entry</gi>, horizontal character offset is
-                        the percent of the current column width to the left of the (left edge of
-                        the) alignment character. </p>
+                     <head><att>charoff</att> horizontal offset of alignment character when align=char </head>
+                     <p>When align="char" for this <gi>entry</gi>, horizontal character offset is the percent of the
+                        current column width to the left of the (left edge of the) alignment character. </p>
                      <p>Declared value: nonNegativeInteger (old: NUTOKEN) </p>
                      <p>Default: IMPLIED, from <gi>colspec</gi> else "50" (i.e., 50%). </p>
                   </div>
@@ -697,8 +614,7 @@
                      <head><att>valign</att> vertical alignment</head>
                      <p>Text vertical positioning within the <gi>entry</gi>. </p>
                      <p>Declared value: top, middle (approximately vertically centered), or bottom. </p>
-                     <p>Default: IMPLIED from the closest ancestor with explicit specification of
-                        valign: <list>
+                     <p>Default: IMPLIED from the closest ancestor with explicit specification of valign: <list>
                            <item><gi>row</gi> then </item>
                            <item><gi>thead</gi> or <gi>tbody</gi>.</item>
                         </list>
@@ -709,13 +625,13 @@
          </div>
          <div type="specification">
             <head>Specification</head>
-            <schemaSpec ident="calsModel" start="calstable">
-               
+            <schemaSpec ident="calsModel" start="calsP_table">
+
                <moduleRef key="tei"/>
-               
+
                <specGrpRef target="#cals"/>
                <specGrp xml:id="cals">
-                  
+
                   <moduleSpec ident="cals"/>
 
                   <dataSpec ident="teidata.yesorno" module="cals">
@@ -725,16 +641,14 @@
                      </content>
                   </dataSpec>
 
-                  <elementSpec mode="add" ident="calstable"
-                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                     <altIdent>table</altIdent>
+                  <elementSpec mode="add" ident="table" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
                      <desc>The <gi>table</gi> element markup identifies a table.</desc>
                      <classes>
                         <memberOf key="model.inter"/>
                      </classes>
                      <content>
-                        <elementRef key="calstabletitle" minOccurs="0" maxOccurs="1"/>
-                        <elementRef key="tgroup" minOccurs="1" maxOccurs="unbounded"/>
+                        <elementRef key="calsP_title" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="calsP_tgroup" minOccurs="1" maxOccurs="unbounded"/>
                      </content>
                      <attList>
                         <attDef ident="corresp" ns="http://www.tei-c.org/ns/1.0">
@@ -765,18 +679,17 @@
                         </attDef>
 
                         <attDef ident="colsep">
-                           <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>.
-                              If a number other than zero, display the internal column rulings to
-                              the right of each <gi>entry</gi>. </desc>
+                           <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If a number other
+                              than zero, display the internal column rulings to the right of each <gi>entry</gi>. </desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
                            </datatype>
                         </attDef>
 
                         <attDef ident="rowsep">
-                           <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>.
-                              If other than zero, display the internal horizontal row ruling below
-                              each <gi>entry</gi> ending in a <gi>row</gi>. </desc>
+                           <desc> Provides default for all <gi>tgroup</gi>s in this <gi>table</gi>. If other than zero,
+                              display the internal horizontal row ruling below each <gi>entry</gi> ending in a
+                                 <gi>row</gi>. </desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
                            </datatype>
@@ -789,15 +702,12 @@
                      </attList>
                   </elementSpec>
 
-                  <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901"
-                     module="cals">
-                     <desc>Each <gi>tgroup</gi> effectively identifies a new portion of a
-                           <gi>table</gi>.</desc>
+                  <elementSpec mode="add" ident="tgroup" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
+                     <desc>Each <gi>tgroup</gi> effectively identifies a new portion of a <gi>table</gi>.</desc>
                      <content>
-
-                        <elementRef key="colspec" minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="thead" minOccurs="0" maxOccurs="1"/>
-                        <elementRef key="tbody"/>
+                        <elementRef key="calsP_colspec" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="calsP_thead" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="calsP_tbody"/>
                      </content>
                      <attList>
                         <attDef ident="cols" usage="req">
@@ -806,17 +716,15 @@
                            </datatype>
                         </attDef>
                         <attDef ident="colsep">
-                           <desc>Provides default for all <gi>colspec</gi>s in this <gi>tgroup</gi>.
-                              If other than zero, display the internal column rulings to the right
-                              of <gi>entry</gi>.</desc>
+                           <desc>Provides default for all <gi>colspec</gi>s in this <gi>tgroup</gi>. If other than zero,
+                              display the internal column rulings to the right of <gi>entry</gi>.</desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
                            </datatype>
                         </attDef>
                         <attDef ident="rowsep">
-                           <desc>Provides default for <gi>colspec</gi>s in this <gi>tgroup</gi>. If
-                              other than zero, display the internal horizontal row ruling below each
-                                 <gi>entry</gi>.</desc>
+                           <desc>Provides default for <gi>colspec</gi>s in this <gi>tgroup</gi>. If other than zero,
+                              display the internal horizontal row ruling below each <gi>entry</gi>.</desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
                            </datatype>
@@ -834,8 +742,7 @@
                      </attList>
                   </elementSpec>
 
-                  <elementSpec mode="add" ident="colspec"
-                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
+                  <elementSpec mode="add" ident="colspec" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
                      <desc>Specifies a column, a vertical portion of a <gi>table</gi>.</desc>
                      <content>
                         <empty/>
@@ -847,45 +754,42 @@
                               <dataRef name="nonNegativeInteger"/>
                            </datatype>
                            <remarks>
-                              <p>The value of colnum is not useful to identify a column in an
-                                    <gi>entry</gi>, so serves no functional purpose other than a
-                                 consistency check on the order of the <gi>colspec</gi>s.</p>
+                              <p>The value of colnum is not useful to identify a column in an <gi>entry</gi>, so serves
+                                 no functional purpose other than a consistency check on the order of the
+                                    <gi>colspec</gi>s.</p>
                            </remarks>
                         </attDef>
                         <attDef ident="colname">
-                           <desc>Name of column, used to specify the position or horizontal span of
-                              columns in a row by reference in <gi>entry</gi> using colname, namest,
-                              and/or nameend.</desc>
+                           <desc>Name of column, used to specify the position or horizontal span of columns in a row by
+                              reference in <gi>entry</gi> using colname, namest, and/or nameend.</desc>
                            <datatype>
                               <dataRef key="NMTOKEN"/>
                            </datatype>
                         </attDef>
                         <attDef ident="colwidth">
-                           <desc>Either proportional measure of the form number* or fixed measure
-                              (pt, pi, pica).</desc>
+                           <desc>Either proportional measure of the form number* or fixed measure (pt, pi, pica).</desc>
                            <datatype>
                               <dataRef key="teidata.text"/>
                            </datatype>
                         </attDef>
                         <attDef ident="colsep">
-                           <desc>Default for column ruling to the right of <gi>entry</gi>s starting
-                              in this column (within the <gi>tgroup</gi>).</desc>
+                           <desc>Default for column ruling to the right of <gi>entry</gi>s starting in this column
+                              (within the <gi>tgroup</gi>).</desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
                            </datatype>
                         </attDef>
                         <attDef ident="rowsep">
-                           <desc>Default for row ruling below an <gi>entry</gi> starting in this
-                              column when there is neither a rowsep value on the <gi>entry</gi> nor
-                              on the <gi>row</gi>.</desc>
+                           <desc>Default for row ruling below an <gi>entry</gi> starting in this column when there is
+                              neither a rowsep value on the <gi>entry</gi> nor on the <gi>row</gi>.</desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
 
                            </datatype>
                         </attDef>
                         <attDef ident="align">
-                           <desc>Text horizontal position within the column or spanning columns.
-                              Possible default source for <gi>entry</gi>.</desc>
+                           <desc>Text horizontal position within the column or spanning columns. Possible default source
+                              for <gi>entry</gi>.</desc>
                            <valList type="closed">
                               <valItem ident="left"/>
                               <valItem ident="right"/>
@@ -907,9 +811,13 @@
                      </attList>
                   </elementSpec>
 
-                  <elementSpec mode="add" ident="calstabletitle"
-                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
+                  <!-- <elementSpec mode="add" ident="calstabletitle"
+                     ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
                      <altIdent>title</altIdent>
+                     <content> -->
+
+                  <elementSpec mode="add" ident="title" ns="http://www.oasis-open.org/specs/tm9901"
+                     module="cals" prefix="calsP_">
                      <content>
                         <macroRef key="macro.paraContent"/>
                      </content>
@@ -922,19 +830,17 @@
                      </attList>
                   </elementSpec>
 
-                  <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901"
-                     module="cals">
-                     <desc>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as
-                        the first rows, and again at the top of any continuation after a physical
-                        break between <gi>rows</gi> in <gi>tbody</gi>.</desc>
+                  <elementSpec mode="add" ident="thead" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
+                     <desc>Identifies the heading <gi>row</gi>s of a <gi>tgroup</gi>, displayed as the first rows, and
+                        again at the top of any continuation after a physical break between <gi>rows</gi> in
+                           <gi>tbody</gi>.</desc>
                      <content>
-                        <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
+                        <elementRef key="calsP_row" minOccurs="1" maxOccurs="unbounded"/>
                      </content>
                      <attList>
                         <attDef ident="valign">
-                           <desc>Default text vertical positioning within the <gi>entry</gi>s.
-                              Provides default value for <gi>row</gi>s and <gi>entry</gi>s in
-                                 <gi>thead</gi>.</desc>
+                           <desc>Default text vertical positioning within the <gi>entry</gi>s. Provides default value
+                              for <gi>row</gi>s and <gi>entry</gi>s in <gi>thead</gi>.</desc>
                            <valList type="closed">
                               <valItem ident="top"/>
                               <valItem ident="middle"/>
@@ -944,18 +850,15 @@
                      </attList>
                   </elementSpec>
 
-                  <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901"
-                     module="cals">
+                  <elementSpec mode="add" ident="tbody" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
                      <desc>Identifies the body of a <gi>tgroup</gi>.</desc>
                      <content>
-                        <elementRef key="calsrow" minOccurs="1" maxOccurs="unbounded"/>
-
+                        <elementRef key="calsP_row" minOccurs="1" maxOccurs="unbounded"/>
                      </content>
                      <attList>
                         <attDef ident="valign">
-                           <desc>Default Text vertical positioning within the <gi>entry</gi>s.
-                              Provides default value for <gi>row</gi> and <gi>entry</gi>s in
-                                 <gi>tbody</gi>.</desc>
+                           <desc>Default Text vertical positioning within the <gi>entry</gi>s. Provides default value
+                              for <gi>row</gi> and <gi>entry</gi>s in <gi>tbody</gi>.</desc>
                            <valList type="closed">
                               <valItem ident="top"/>
                               <valItem ident="middle"/>
@@ -965,14 +868,10 @@
                      </attList>
                   </elementSpec>
 
-                  <elementSpec mode="add" ident="calsrow"
-                     ns="http://www.oasis-open.org/specs/tm9901" module="cals">
-                     <altIdent>row</altIdent>
-                     <desc>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi>
-                        element. </desc>
+                  <elementSpec mode="add" ident="row" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
+                     <desc>Identifies the row information in a <gi>thead</gi> or <gi>tbody</gi> element. </desc>
                      <content>
-                        <elementRef key="entry" minOccurs="1" maxOccurs="unbounded"/>
-
+                        <elementRef key="calsP_entry" minOccurs="1" maxOccurs="unbounded"/>
                      </content>
                      <attList>
                         <attDef ident="style" ns="http://www.iso.org/ns/1.0">
@@ -980,19 +879,16 @@
                               <dataRef key="teidata.text"/>
                            </datatype>
                         </attDef>
-
                         <attDef ident="rowsep">
-                           <desc>Default for all <gi>entry</gi>s starting in this <gi>row</gi> that
-                              do not specify rowsep. If other than zero, display the internal
-                              horizontal row ruling below an <gi>entry</gi> in the
-                              <gi>row</gi>.</desc>
+                           <desc>Default for all <gi>entry</gi>s starting in this <gi>row</gi> that do not specify
+                              rowsep. If other than zero, display the internal horizontal row ruling below an
+                                 <gi>entry</gi> in the <gi>row</gi>.</desc>
                            <datatype>
                               <dataRef key="teidata.yesorno"/>
                            </datatype>
                         </attDef>
                         <attDef ident="valign">
-                           <desc>Text vertical positioning default for <gi>entry</gi>s in a
-                                 <gi>row</gi>.</desc>
+                           <desc>Text vertical positioning default for <gi>entry</gi>s in a <gi>row</gi>.</desc>
                            <valList type="closed">
                               <valItem ident="top"/>
                               <valItem ident="middle"/>
@@ -1002,10 +898,7 @@
                      </attList>
                   </elementSpec>
 
-                  <!-- module="cals" prefix="cals_"  prefix="cals_" -->
-
-                  <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901"
-                     module="cals">
+                  <elementSpec ident="entry" mode="add" ns="http://www.oasis-open.org/specs/tm9901" module="cals" prefix="calsP_">
                      <classes>
                         <memberOf key="att.global.CALSlayout"/>
                      </classes>
@@ -1026,9 +919,8 @@
                            </datatype>
                         </attDef>
                         <attDef ident="colname">
-                           <desc>Column name of <gi>entry</gi>. Ignore if namest is present. It is
-                              an error if colname is not defined in a <gi>colspec</gi> of the
-                              current <gi>tgroup</gi>.</desc>
+                           <desc>Column name of <gi>entry</gi>. Ignore if namest is present. It is an error if colname
+                              is not defined in a <gi>colspec</gi> of the current <gi>tgroup</gi>.</desc>
                            <datatype>
                               <dataRef key="NMTOKEN"/>
                            </datatype>
@@ -1054,8 +946,7 @@
                            </datatype>
                         </attDef>
                         <attDef ident="valign">
-                           <desc>Text horizontal position within the column or spanning
-                              columns.</desc>
+                           <desc>Text horizontal position within the column or spanning columns.</desc>
                            <valList type="closed">
                               <valItem ident="top"/>
                               <valItem ident="middle"/>
@@ -1078,7 +969,7 @@
 >
                -->
 
-                  <elementSpec ident="spanspec" module="cals" validUntil="1996-05-08">
+                  <elementSpec ident="spanspec" module="cals" validUntil="1996-05-08" prefix="calsP_">
                      <classes>
                         <memberOf key="att.global.CALSlayout"/>
                      </classes>

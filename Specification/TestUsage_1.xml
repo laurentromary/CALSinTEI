@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/home/jromary/Programmation/XML/CALSinTEI/Specification/out/TestUsage_0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="file:out/TestUsage_0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title></title>
+                <title></title><title></title>
             </titleStmt>
             <publicationStmt>
                 <p/>
@@ -17,6 +17,7 @@
     <text>
         <body>
             <table xmlns="http://www.oasis-open.org/specs/tm9901">
+                <title></title>
                 <tgroup cols="0">
                     <tbody>
                         <row>
