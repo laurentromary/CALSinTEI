@@ -49,6 +49,10 @@
    </teiHeader>
    <text>
       <body>
+         <div>
+            <head> Warning</head>
+            <p>When used from outside useing a <gi>specGrpRef</gi>, the calling specification should include at least the "tei" module.</p>
+         </div>
          <div type="introduction">
             <head>Introduction</head>
             <p>This SGML Open Technical Resolution defines an Exchange subset of the full CALS table model DTD described
@@ -627,6 +631,7 @@
             <head>Specification</head>
             <schemaSpec ident="calsModel" start="calsP_table">
 
+            <!-- When used from outside useing a specGrpRef, the calling specification should include at least the "tei" module as below-->
                <moduleRef key="tei"/>
 
                <specGrpRef target="#cals"/>

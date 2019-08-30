@@ -5,22 +5,431 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-08-20T15:25:32Z. .
-TEI Edition: Version 3.5.0. Last updated on
-	29th January 2019, revision 3c0c64ec4
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
+Schema generated from ODD source 2019-08-30T12:19:58Z. .
+TEI Edition: Version 3.6.0. Last updated on
+	16th July 2019, revision daa3cc0b9
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
   
 --><!---->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
-   <define name="calstable">
+   <define name="macro.paraContent">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="model.gLike"/>
+            <ref name="model.phrase"/>
+            <ref name="model.inter"/>
+            <ref name="model.global"/>
+        
+            <ref name="model.lLike"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="model.nameLike.agent">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike.agent_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike.agent_sequence">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.segLike">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.highlighted">
+      <choice>
+         <ref name="model.hiLike"/>
+         <ref name="model.emphLike"/>
+      </choice>
+   </define>
+   <define name="model.dateLike">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.egLike">
+      <notAllowed/>
+   </define>
+   <define name="model.graphicLike">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.msdesc">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial_sequence">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional_sequence">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.edit">
+      <choice>
+         <ref name="model.pPart.editorial"/>
+         <ref name="model.pPart.transcriptional"/>
+      </choice>
+   </define>
+   <define name="model.ptrLike">
+      <notAllowed/>
+   </define>
+   <define name="model.lPart">
+      <notAllowed/>
+   </define>
+   <define name="model.global.meta">
+      <notAllowed/>
+   </define>
+   <define name="model.milestoneLike">
+      <notAllowed/>
+   </define>
+   <define name="model.gLike">
+      <notAllowed/>
+   </define>
+   <define name="model.oddDecl">
+      <notAllowed/>
+   </define>
+   <define name="model.phrase.xml">
+      <notAllowed/>
+   </define>
+   <define name="model.specDescLike">
+      <notAllowed/>
+   </define>
+   <define name="model.biblLike">
+      <notAllowed/>
+   </define>
+   <define name="model.labelLike">
+      <notAllowed/>
+   </define>
+   <define name="model.listLike">
+      <notAllowed/>
+   </define>
+   <define name="model.noteLike">
+      <notAllowed/>
+   </define>
+   <define name="model.lLike">
+      <notAllowed/>
+   </define>
+   <define name="model.stageLike">
+      <notAllowed/>
+   </define>
+   <define name="model.global.edit">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart_sequence">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.placeStateLike">
+      <choice>
+         <ref name="model.placeNamePart"/>
+      </choice>
+   </define>
+   <define name="model.placeStateLike_alternation">
+      <choice>
+         <ref name="model.placeNamePart_alternation"/>
+      </choice>
+   </define>
+   <define name="model.placeStateLike_sequence">
+      <ref name="model.placeNamePart_sequence"/>
+   </define>
+   <define name="model.placeStateLike_sequenceOptional">
+      <optional>
+         <ref name="model.placeNamePart_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="model.placeStateLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.placeStateLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="model.placeNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="model.quoteLike">
+      <notAllowed/>
+   </define>
+   <define name="model.quoteLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.quoteLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.qLike">
+      <choice>
+         <ref name="model.quoteLike"/>
+      </choice>
+   </define>
+   <define name="model.addressLike">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike">
+      <choice>
+         <ref name="model.nameLike.agent"/>
+         <ref name="model.offsetLike"/>
+         <ref name="model.placeStateLike"/>
+      </choice>
+   </define>
+   <define name="model.nameLike_alternation">
+      <choice>
+         <ref name="model.nameLike.agent_alternation"/>
+         <ref name="model.offsetLike_alternation"/>
+         <ref name="model.placeStateLike_alternation"/>
+      </choice>
+   </define>
+   <define name="model.nameLike_sequence">
+      <ref name="model.nameLike.agent_sequence"/>
+      <ref name="model.offsetLike_sequence"/>
+      <ref name="model.placeStateLike_sequence"/>
+   </define>
+   <define name="model.nameLike_sequenceOptional">
+      <optional>
+         <ref name="model.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="model.offsetLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="model.placeStateLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="model.nameLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.nameLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="model.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="model.offsetLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="model.placeStateLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="model.global">
+      <choice>
+         <ref name="model.global.meta"/>
+         <ref name="model.milestoneLike"/>
+         <ref name="model.noteLike"/>
+         <ref name="model.global.edit"/>
+      </choice>
+   </define>
+   <define name="model.pPart.data">
+      <choice>
+         <ref name="model.dateLike"/>
+         <ref name="model.measureLike"/>
+         <ref name="model.addressLike"/>
+         <ref name="model.nameLike"/>
+      </choice>
+   </define>
+   <define name="model.inter">
+      <choice>
+         <ref name="model.egLike"/>
+         <ref name="model.oddDecl"/>
+         <ref name="model.biblLike"/>
+         <ref name="model.labelLike"/>
+         <ref name="model.listLike"/>
+         <ref name="model.stageLike"/>
+         <ref name="model.qLike"/>
+         <ref name="calsP_table"/>
+      </choice>
+   </define>
+   <define name="model.phrase">
+      <choice>
+         <ref name="model.segLike"/>
+         <ref name="model.highlighted"/>
+         <ref name="model.graphicLike"/>
+         <ref name="model.pPart.msdesc"/>
+         <ref name="model.pPart.edit"/>
+         <ref name="model.ptrLike"/>
+         <ref name="model.lPart"/>
+         <ref name="model.phrase.xml"/>
+         <ref name="model.specDescLike"/>
+         <ref name="model.pPart.data"/>
+      </choice>
+   </define>
+   <define name="calsP_table">
       <element name="table" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The table element markup identifies a table.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code> element markup identifies a table.</a:documentation>
          <optional>
-            <ref name="calstabletitle"/>
+            <ref name="calsP_title"/>
          </optional>
-         <ref name="tgroup"/>
+         <oneOrMore>
+            <ref name="calsP_tgroup"/>
+         </oneOrMore>
          <optional>
             <attribute name="corresp" ns="http://www.tei-c.org/ns/1.0">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -29,7 +438,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <optional>
             <attribute name="style" ns="http://www.iso.org/ns/1.0">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <text/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
@@ -58,41 +467,48 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="colsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all tgroups in this table. If a number other than zero, display the internal column rulings to the right of each entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>. If a number other than zero, display the internal column rulings to the right of each <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all tgroups in this table. If other than zero, display the internal horizontal row ruling below each entry ending in a row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>. If other than zero, display the internal horizontal row ruling below each <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> ending in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pgwide">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <empty/>
       </element>
    </define>
-   <define name="tgroup">
+   <define name="calsP_tgroup">
       <element name="tgroup" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Each tgroup effectively identifies a new portion of a table.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Each <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code> effectively identifies a new portion of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>.</a:documentation>
          <zeroOrMore>
-            <ref name="colspec"/>
+            <ref name="calsP_colspec"/>
          </zeroOrMore>
          <optional>
-            <ref name="thead"/>
+            <ref name="calsP_thead"/>
          </optional>
-         <ref name="tbody"/>
+         <ref name="calsP_tbody"/>
          <attribute name="cols">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="nonNegativeInteger"/>
          </attribute>
          <optional>
             <attribute name="colsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all colspecs in this tgroup. If other than zero, display the internal column rulings to the right of entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>. If other than zero, display the internal column rulings to the right of <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for colspecs in this tgroup. If other than zero, display the internal horizontal row ruling below each entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides default for <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code>s in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>. If other than zero, display the internal horizontal row ruling below each <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
@@ -116,9 +532,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="colspec">
+   <define name="calsP_colspec">
       <element name="colspec" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a column, a vertical portion of a table.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a column, a vertical portion of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>.</a:documentation>
          <empty/>
          <optional>
             <attribute name="colnum">
@@ -128,30 +544,30 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </optional>
          <optional>
             <attribute name="colname">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of column, used to specify the position or horizontal span of columns in a row by reference in entry using colname, namest, and/or nameend.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of column, used to specify the position or horizontal span of columns in a row by reference in <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> using colname, namest, and/or nameend.</a:documentation>
             </attribute>
          </optional>
          <optional>
             <attribute name="colwidth">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Either proportional measure of the form number* or fixed measure (pt, pi, pica).</a:documentation>
-               <text/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="colsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for column ruling to the right of entrys starting in this column (within the tgroup).</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for column ruling to the right of <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s starting in this column (within the <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>).</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for row ruling below an entry starting in this column when there is neither a rowsep value on the entry nor on the row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for row ruling below an <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> starting in this column when there is neither a rowsep value on the <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> nor on the <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="align">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text horizontal position within the column or spanning columns. Possible default source for entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text horizontal position within the column or spanning columns. Possible default source for <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>.</a:documentation>
                <choice>
                   <value>left</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -169,6 +585,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <optional>
             <attribute name="char">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
@@ -179,9 +596,10 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="calstabletitle">
+   <define name="calsP_title">
       <element name="title" ns="http://www.oasis-open.org/specs/tm9901">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.paraContent"/>
          <optional>
             <attribute name="xml:id">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -190,15 +608,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="thead">
+   <define name="calsP_thead">
       <element name="thead" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the heading rows of a tgroup, displayed as the first rows, and again at the top of any continuation after a physical break between rows in tbody.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the heading <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>s of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>, displayed as the first rows, and again at the top of any continuation after a physical break between <code xmlns="http://www.w3.org/1999/xhtml">&lt;rows&gt;</code> in <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code>.</a:documentation>
          <oneOrMore>
-            <ref name="calsrow"/>
+            <ref name="calsP_row"/>
          </oneOrMore>
          <optional>
             <attribute name="valign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default text vertical positioning within the entrys. Provides default value for rows and entrys in thead.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default text vertical positioning within the <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s. Provides default value for <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>s and <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s in <code xmlns="http://www.w3.org/1999/xhtml">&lt;thead&gt;</code>.</a:documentation>
                <choice>
                   <value>top</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -212,15 +630,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="tbody">
+   <define name="calsP_tbody">
       <element name="tbody" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the body of a tgroup.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the body of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>.</a:documentation>
          <oneOrMore>
-            <ref name="calsrow"/>
+            <ref name="calsP_row"/>
          </oneOrMore>
          <optional>
             <attribute name="valign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default Text vertical positioning within the entrys. Provides default value for row and entrys in tbody.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default Text vertical positioning within the <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s. Provides default value for <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code> and <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s in <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code>.</a:documentation>
                <choice>
                   <value>top</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -234,26 +652,27 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="calsrow">
+   <define name="calsP_row">
       <element name="row" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the row information in a thead or tbody element.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the row information in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;thead&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;tbody&gt;</code> element.</a:documentation>
          <oneOrMore>
-            <ref name="entry"/>
+            <ref name="calsP_entry"/>
          </oneOrMore>
          <optional>
             <attribute name="style" ns="http://www.iso.org/ns/1.0">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="rowsep">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for all entrys starting in this row that do not specify rowsep. If other than zero, display the internal horizontal row ruling below an entry in the row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Default for all <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s starting in this <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code> that do not specify rowsep. If other than zero, display the internal horizontal row ruling below an <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code> in the <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="valign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text vertical positioning default for entrys in a row.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text vertical positioning default for <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>s in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;row&gt;</code>.</a:documentation>
                <choice>
                   <value>top</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -267,21 +686,24 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <empty/>
       </element>
    </define>
-   <define name="entry">
+   <define name="calsP_entry">
       <element name="entry" ns="http://www.oasis-open.org/specs/tm9901">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entry in Table) Identifies an entry in a row of a thead, tfoot, or tbody in a tgroup or entrytbl. Default values for colsep, rowsep, valign, align, char, and charoff may come from like-named attributes from the nearest element identified as influencing this entry. The values may come from table (or a tabstyle therein), tgroup (or a tgroupstyle therein), spanspec (defining the spanname), colspec (defining namest or colname), tbody, row, or when within an entrytbl those elements so contained, or its tgroupstyle. Note that colspec and spanspec are not strictly in the element lineage.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <choice>
             <text/>
+            <ref name="model.global"/>
+            <ref name="macro.paraContent"/>
          </choice>
          <ref name="att.global.CALSlayout.attributes"/>
          <optional>
             <attribute name="style" ns="http://www.iso.org/ns/1.0">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="colname">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Column name of entry. Ignore if namest is present. It is an error if colname is not defined in a colspec of the current tgroup.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Column name of <code xmlns="http://www.w3.org/1999/xhtml">&lt;entry&gt;</code>. Ignore if namest is present. It is an error if colname is not defined in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;colspec&gt;</code> of the current <code xmlns="http://www.w3.org/1999/xhtml">&lt;tgroup&gt;</code>.</a:documentation>
             </attribute>
          </optional>
          <optional>
@@ -298,6 +720,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          <optional>
             <attribute name="char">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
@@ -332,6 +755,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
       <optional>
          <attribute name="namest">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="Name"/>
          </attribute>
       </optional>
    </define>
@@ -339,6 +763,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
       <optional>
          <attribute name="nameend">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="Name"/>
          </attribute>
       </optional>
    </define>
@@ -379,7 +804,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
    </define>
    <start>
       <choice>
-         <ref name="calstable"/>
+         <ref name="calsP_table"/>
       </choice>
    </start>
 </grammar>

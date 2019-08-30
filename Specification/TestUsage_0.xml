@@ -21,6 +21,7 @@
          <div>
             <schemaSpec ident="calsUsage" start="TEI">
                <moduleRef key="core" except=""/>
+               <!-- When used from outside useing a specGrpRef, the calling specification should include at least the "tei" module as below-->
                <moduleRef key="tei" except=""/>
                <moduleRef key="header" except=""/>
                <moduleRef key="textstructure" except=""/>
